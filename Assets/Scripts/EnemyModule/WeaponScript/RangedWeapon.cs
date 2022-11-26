@@ -6,6 +6,7 @@ using UnityEngine;
 //Weapon attack in ranged
 public class RangedWeapon : WeaponBase
 {
+    [SerializeField] Transform placeToShoot;
     public ActiveWeapon activeWeaponPrefab;
     public override float GetDmg()
     {
@@ -14,7 +15,7 @@ public class RangedWeapon : WeaponBase
 
     public override void DmgUser()
     {
-        var prj = Instantiate(activeWeaponPrefab, enemyBase.transform.position, Quaternion.identity);
+        var prj = Instantiate(activeWeaponPrefab, placeToShoot.position, Quaternion.identity);
         prj.SetDirection(enemyBase.Target.position - enemyBase.transform.position);
     }
 }

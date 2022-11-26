@@ -9,12 +9,19 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] protected DefendBase target;
     public Transform Target => target.transform;
     public virtual EnemyType EnemyType => EnemyType.Melee;
+
+    private void Awake()
+    {
+        crrHp = enemyStatus.enemyHp;
+        EnemyTakeDmg(0, null);
+    }
+
     #region Enemy AI
     [Header("AI Component")]
 
     [SerializeField] protected Collider colliderEnemy;
     [SerializeField] protected Rigidbody thisRG;
-
+   
     protected virtual bool InDistance()
     {
         var dis = Vector3.Distance(Target.position, transform.position);
@@ -60,8 +67,10 @@ public class EnemyBase : MonoBehaviour
     #endregion
 
     #region Enemy Status Handler
+    private float crrHp;
     [Header("Enemy Status")]
     [SerializeField] protected EnemyStatus enemyStatus;
+    [SerializeField] protected EnemyUI enemyUI;
     public virtual void SetStatsByConfig()
     {
 
@@ -85,9 +94,12 @@ public class EnemyBase : MonoBehaviour
 
     public void EnemyTakeDmg(float dmg, UnityAction unityAction)
     {
-        enemyStatus.enemyHp -= dmg;
+        crrHp -= dmg;
+        float percent = crrHp / enemyStatus.enemyHp;
+        enemyUI.SetFillBar(percent);
+
         unityAction?.Invoke();
-        if(enemyStatus.enemyHp <= 0)
+        if(crrHp <= 0)
         {
             DestroyThisEnemy();
         }
