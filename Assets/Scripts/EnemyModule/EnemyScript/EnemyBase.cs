@@ -17,14 +17,17 @@ public class EnemyBase : MonoBehaviour
     public virtual EnemyType EnemyType => EnemyType.Melee;
 
     public Image healthBar;
-
+    private float _rangeStalkStart;
+    private float _rangeStalkEnd;
     private void Awake()
     {
+        _rangeStalkStart = rangeToStop;
+        _rangeStalkEnd = rangeToStop * 1.25f;
         crrHp = enemyStatus.enemyHp;
         EnemyTakeDmg(0, null);
         _crrTarget = defaultTarget;
         _player = Chicken.Instance.defend;
-        
+
     }
 
     #region Enemy AI
@@ -75,6 +78,18 @@ public class EnemyBase : MonoBehaviour
 
     public void SetTarget(DefendBase defendBase)
     {
+        if(defendBase == defaultTarget)
+        {
+            rangeToStop = _rangeStalkStart;
+            animator.TriggerIddle();
+
+        }
+        else
+        {
+            animator.TriggerRun();
+
+            rangeToStop = _rangeStalkEnd;
+        }
         this._crrTarget = defendBase;
     }
     #endregion
@@ -114,6 +129,9 @@ public class EnemyBase : MonoBehaviour
         healthBar.fillAmount = percent;
         SetTarget(Chicken.Instance.defend);
         unityAction?.Invoke();
+
+        VFXManager.Instance.PlayHitPlayerMelee(transform.position);
+
         if(crrHp <= 0)
         {
             DestroyThisEnemy();
@@ -190,7 +208,7 @@ public class EnemyBase : MonoBehaviour
         {
             var v = new Vector3(_player.transform.position.x, transform.position.y, _player.transform.position.z);
             var distance = Vector3.Distance(v, transform.position);
-            if (distance > rangeToStop * 0.95f)
+            if (distance > rangeToStop)
             {
                 SetTarget(defaultTarget);
             }
