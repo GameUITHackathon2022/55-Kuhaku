@@ -228,8 +228,8 @@ Rigidbody:
   m_GameObject: {fileID: 4845200111445655213}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 10
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -261,9 +261,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fea391f512a09e4f9cd6b4e556bf4f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  defaultTarget: {fileID: 0}
+  _player: {fileID: 0}
+  _crrTarget: {fileID: 0}
   colliderEnemy: {fileID: 8334416925198147980}
   thisRG: {fileID: 2641605987029405688}
+  isReadyAttack: 0
   enemyStatus:
     enemyHp: 12
     enemySpeed: 5.8
@@ -283,8 +286,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.624832, z: 0.6480559}
-  m_Center: {x: 0, y: 0.522572, z: 0.17597204}
+  m_Size: {x: 1.0120478, y: 3.203773, z: 1.1898874}
+  m_Center: {x: 0, y: 0.9934485, z: 0.4468878}
 --- !u!1 &4845265727521056622
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +843,7 @@ Transform:
   m_GameObject: {fileID: 4845629980737188224}
   m_LocalRotation: {x: -0.49027842, y: 0.42624924, z: 0.49878895, w: 0.57371444}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4843009308329341508}

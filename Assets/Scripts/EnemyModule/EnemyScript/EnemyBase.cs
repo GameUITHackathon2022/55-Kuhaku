@@ -18,6 +18,7 @@ public class EnemyBase : MonoBehaviour
         crrHp = enemyStatus.enemyHp;
         EnemyTakeDmg(0, null);
         isReadyAttack = false;
+        _crrTarget = defaultTarget;
     }
 
     #region Enemy AI
