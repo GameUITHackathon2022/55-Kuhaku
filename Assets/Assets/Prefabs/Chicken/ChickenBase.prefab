@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 2736815694647831134}
   - component: {fileID: 2736815694647831129}
   - component: {fileID: 4701150949918335988}
+  - component: {fileID: 1991809073}
   m_Layer: 6
   m_Name: ChickenBase
   m_TagString: Untagged
@@ -263,5 +264,19 @@ MonoBehaviour:
   Distance: 10
   chickenTail: {fileID: 2736815694108793326}
   rb: {fileID: 2736815694647831129}
-  BodyPrefab: {fileID: 0}
   PositionsHistory: []
+--- !u!114 &1991809073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2736815694647831135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1897b3bacef4b8a42936d288c5a06b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UserData: {fileID: 0}
+  text: {fileID: 0}
+  playerTransform: {fileID: 2736815694647831131}
