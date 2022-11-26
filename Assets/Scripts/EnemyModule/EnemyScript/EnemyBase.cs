@@ -31,7 +31,8 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] protected Rigidbody thisRG;
     protected virtual bool InDistance()
     {
-        var dis = Vector3.Distance(Target.position, transform.position);
+        Vector3 vecto = new Vector3(Target.position.x, transform.position.y, Target.position.z);
+        var dis = Vector3.Distance(vecto, transform.position);
         return dis <= enemyStatus.rangeAttack;
     }
     
