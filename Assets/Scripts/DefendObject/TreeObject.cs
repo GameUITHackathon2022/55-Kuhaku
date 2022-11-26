@@ -56,7 +56,7 @@ public class TreeObject : DefendBase
         {
             return;
         }
-        currentHp = maxHp - currentHp;
+        currentHp -= damage;
         this.transform.DOShakePosition(0.8f, new Vector3(0.1f, 0f, 0f));
         if (currentHp < 0)
         { 
