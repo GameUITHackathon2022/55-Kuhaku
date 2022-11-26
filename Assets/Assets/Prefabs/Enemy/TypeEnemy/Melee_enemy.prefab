@@ -228,7 +228,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 10
-  m_AngularDrag: 1
+  m_AngularDrag: 2.52
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -260,19 +260,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fea391f512a09e4f9cd6b4e556bf4f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rangeToStop: 5
   defaultTarget: {fileID: 0}
   _player: {fileID: 0}
   _crrTarget: {fileID: 0}
   colliderEnemy: {fileID: 8334416925198147980}
   thisRG: {fileID: 2641605987029405688}
-  isReadyAttack: 0
-  headLook: {fileID: 4842761029622209347}
+  headLook: {fileID: 4842688413896534193}
   enemyStatus:
     enemyHp: 12
-    enemySpeed: 5.8
+    enemySpeed: 5
     cdEnemey: 3.48
-    rangeAttack: 1.93
-  enemyUI: {fileID: 0}
+    rangeAttack: 1
   weaponBase: {fileID: 9212827218168834990}
   animator: {fileID: 2284001114178957331}
 --- !u!65 &8334416925198147980
@@ -1228,6 +1227,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponBase:
-    dmg: 6.84
+    dmg: 6
     rangeDmg: 0.86
   enemyBase: {fileID: 4220606332790803965}
