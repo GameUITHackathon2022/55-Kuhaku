@@ -19,7 +19,7 @@ public class Chicken : MonoSingleton<Chicken>
     [SerializeField] Transform chickenVisual;
     [SerializeField] Rigidbody rb;
     [SerializeField] private ChickenAnimationController _chickenAnimationController;
-    [SerializeField] private Image healFill;
+    //[SerializeField] private Image healFill;
 
     // Lists
     public List<Chip> BodyParts = new List<Chip>();
@@ -115,7 +115,8 @@ public class Chicken : MonoSingleton<Chicken>
     {
         defend.currentHp -= damage;
         float percent = ((float)defend.currentHp / defend.maxHp);
-        healFill.fillAmount = percent;
+        //healFill.fillAmount = percent;
+        FollowHealthBar.Instance.SetFill(percent);
     }
 
     private void OnTriggerEnter(Collider other)

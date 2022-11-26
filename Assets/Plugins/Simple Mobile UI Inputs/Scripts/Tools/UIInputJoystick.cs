@@ -39,7 +39,7 @@ namespace UI_Inputs
 
         private void Update()
         {
-            if (this.JoystickDirection() != Vector2.zero)
+            if (this.JoystickDirection() != Vector2.zero && joystickTut != null)
             {
                 joystickTut.SetActive(false);
             }
