@@ -27,4 +27,10 @@ public class GroundHandler : MonoSingleton<GroundHandler>
         if(TreeLenght <= 0)
             GameManager.Instance.OnEndGame();
     }
+
+    private void Awake()
+    {
+        GameLevel.Instance.numTree = TreeLenght;
+        UIScoreGame.Instance.SetCurrentTree();
+    }
 }
