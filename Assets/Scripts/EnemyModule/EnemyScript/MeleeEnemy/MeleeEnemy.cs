@@ -49,7 +49,7 @@ public class MeleeEnemy : EnemyBase
 
     public override void DestroyThisEnemy()
     {
-        //base.DestroyThisEnemy();
+        base.DestroyThisEnemy();
     }
 
     protected override void FixedUpdate()
@@ -79,6 +79,7 @@ public class MeleeEnemy : EnemyBase
         if(defaultTarget is TreeObject)
             GroundHandler.Instance.RemoveTree(defaultTarget as TreeObject);
         Destroy(Target.gameObject);
+        this.DestroyThisEnemy();
         Destroy(this.gameObject);
         
     }

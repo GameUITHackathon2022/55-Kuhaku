@@ -10,11 +10,11 @@ public class UIScoreGame : MonoSingleton<UIScoreGame>
 
     public void SetCurrentEnemies()
     {
-        currentEnemies.text = $"{SpawnEnemyManager.Instance.currentEnemy} / {SpawnEnemyManager.Instance.TotalEnemy}";
+        currentEnemies.text = $"{SpawnEnemyManager.Instance.currentEnemy} / {SpawnEnemyManager.Instance.TotalEnemy} Enemies";
     }
 
     public void SetCurrentTree()
     {
-
+        currentTreeLeft.text = $"{GroundHandler.Instance.TreeLenght} / {GameLevel.Instance.numTree} Trees";
     }
 }
