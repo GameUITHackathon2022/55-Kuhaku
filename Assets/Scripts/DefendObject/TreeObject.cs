@@ -47,7 +47,7 @@ public class TreeObject : DefendBase
     //#endif
     //    }
 
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(float damage)
     {
         currentHp = maxHp - currentHp;
         this.transform.DOShakePosition(0.8f, new Vector3(0.1f, 0f, 0f));
