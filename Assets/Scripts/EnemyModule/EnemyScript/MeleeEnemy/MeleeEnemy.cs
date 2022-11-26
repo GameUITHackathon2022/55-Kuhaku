@@ -72,6 +72,10 @@ public class MeleeEnemy : EnemyBase
             yield return null;
         }
         VFXManager.Instance.SpawnFXExplo(this.transform.position);
+
+        var chicken = Chicken.Instance;
+        if(Vector3.Distance(chicken.transform.position,new Vector3(this.transform.position.x,chicken.transform.position.y,this.transform.position.z)) <= 3)
+            chicken.OnTakeDamage(10);
         Destroy(Target.gameObject);
         Destroy(this.gameObject);
     }
