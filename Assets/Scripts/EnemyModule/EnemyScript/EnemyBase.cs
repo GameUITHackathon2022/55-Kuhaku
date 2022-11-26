@@ -19,9 +19,9 @@ public class EnemyBase : MonoBehaviour
     protected bool InDistance()
     {
         var dis = Vector3.Distance(player.position, transform.position);
-     
         return dis <= enemyStatus.rangeAttack;
     }
+    
     protected bool CanAttack => InDistance() && timeCd <= 0;
 
     protected virtual void OnChasePlayer()

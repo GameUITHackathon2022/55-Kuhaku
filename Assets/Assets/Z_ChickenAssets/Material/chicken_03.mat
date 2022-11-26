@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: chicken_03
+  m_Shader: {fileID: 4800000, guid: b7255cc75972e264c97889538ab55cfd, type: 3}
+  m_ShaderKeywords: _ALPHATEST_ON _EDGE_DETECTION_FAKE_ON _EDGE_DETECTION_ON _EMISSION _FRESNEL_ON _GRADIENT_OR_SOLID_COLOR_ON _SOFT_TEXTURE_ON
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _mask_02:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _niuqutu:
+        m_Texture: {fileID: 2800000, guid: 63df6ec34f307d14f8c2679d501b2d8f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tietu:
+        m_Texture: {fileID: 2800000, guid: 63df6ec34f307d14f8c2679d501b2d8f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_4D80B068: 0.3146104
+    - _Amount: 0.5
+    - _Brightness: 1
+    - _BumpAmt: 10
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _Cutoff: 0.5
+    - _Decay: 0.3
+    - _Depth: 30
+    - _Depthpower: 1
+    - _DetailNormalMapScale: 1
+    - _DistortX: 1.96
+    - _DistortY: 0
+    - _DstBlend: 0
+    - _ENABLE_VC: 0
+    - _EdgeFade: 0.2448298
+    - _Edge_Detection: 1
+    - _Edge_Detection_Distance: 3
+    - _Edge_Detection_Fake: 0.2901961
+    - _Emission: 1
+    - _FoamOpacity: 0.05
+    - _FoamSize: 0
+    - _FoamSpeed: 0.1
+    - _FoamTiling: 0.05
+    - _Fresnel: 1
+    - _FresnelColorVal: 1
+    - _Fresnel_Exponent: 1
+    - _Fresnel_Val: 3
+    - _GaoGuangFanWei: 0.5
+    - _GaoGuang_qiangdu: 0.1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Glow: 1.66
+    - _Gradient_Or_Solid_Color: 1
+    - _Illuminate: 0.5
+    - _Intensity: 1
+    - _InvFade: 1
+    - _LBTW_yundong: 0.3
+    - _LB_ColorVal: 1
+    - _LIGHTING: 0
+    - _Make_Same_As_Fresnel: 0
+    - _Metallic: 0
+    - _Mode: 1
+    - _NORMAL_MAP: 0
+    - _NormalStrength: 0.25
+    - _NormalTiling: 0.9
+    - _OcclusionStrength: 1
+    - _Opacity: 1
+    - _Outline: 0.03
+    - _Pan_Speed: 1
+    - _Parallax: 0.02
+    - _RimPower: 0.9
+    - _RimSize: 5
+    - _Rimfalloff: 3
+    - _Rimtiling: 0.5
+    - _Shininess: 0.88
+    - _SmoothnessTextureChannel: 0
+    - _SoftClip: 0.3504274
+    - _Soft_Texture: 1.698039
+    - _SpecularHighlights: 1
+    - _SpeedX: 0.91
+    - _SpeedY: 1.87
+    - _SrcBlend: 1
+    - _StartAmount: 0.1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _TW_ColorVal: 1
+    - _Tile: 3.67
+    - _Transparency: 0.75
+    - _USE_VC_INTERSECTION: 0
+    - _UVSec: 0
+    - _Unlit: 0
+    - _UseIntersectionFoam: 0
+    - _UseUIAlphaClip: 0
+    - _Usecenterglow: 0
+    - _Usedepth: 0
+    - _WaveFoam: 0
+    - _WaveHeight: 0.05
+    - _WaveSize: 0.1
+    - _Wavesspeed: 0.75
+    - _Wavetint: 0
+    - _WenLi_qiangdu: 0.1
+    - _WenLi_yundong: 0.05
+    - _Worldspacetiling: 1
+    - _ZWrite: 1
+    - __dirty: 1
+    - _fne: 1
+    - _node_9908: 1.92
+    - _rongjie: 1.5
+    - _rongjiebianyuan: 0
+    m_Colors:
+    - Color_339C9C0E: {r: 0, g: 0, b: 0, a: 0}
+    - Vector4_4C9290A1: {r: 1, g: 1, b: 0, a: 0}
+    - _AddColor: {r: 1, g: 0.2573743, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorAnimate: {r: 1, g: 1, b: 1, a: 1}
+    - _DissColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 0.459629, b: 0, a: 1}
+    - _Fresnel_Color: {r: 1, g: 0.27581564, b: 0, a: 1}
+    - _GaoGuang_Color: {r: 0.3088235, g: 0.7711966, b: 1, a: 1}
+    - _LB_Color: {r: 1, g: 0.51870775, b: 0, a: 1}
+    - _OutlineColor: {r: 1, g: 0.6055647, b: 0, a: 1}
+    - _RimColor: {r: 1, g: 0.45844075, b: 0, a: 1}
+    - _Solid_Color: {r: 0.1764706, g: 0.5229208, b: 1, a: 1}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _SpeedMainTexUVNoiseZW: {r: 0, g: 0, b: 0, a: 0}
+    - _TW_Color: {r: 0.6764706, g: 0.8929007, b: 1, a: 1}
+    - _TintColor: {r: 1, g: 0.6897315, b: 0, a: 1}
+    - _WaterColor: {r: 0.1176471, g: 0.6348885, b: 1, a: 0}
+    - _WaterShallowColor: {r: 0.4191176, g: 0.7596349, b: 1, a: 0}
+    - _WaveDirection: {r: 1, g: 0, b: 0, a: 0}
+    - _bianyuanyanse: {r: 0.2790184, g: 0, b: 1, a: 1}
+    - _node_3394: {r: 0.5477066, g: 0, b: 1, a: 1}
+    - _tietuyanse: {r: 1, g: 1, b: 1, a: 1}
