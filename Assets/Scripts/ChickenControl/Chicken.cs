@@ -34,10 +34,33 @@ public class Chicken : MonoSingleton<Chicken>
     {
         if(isMove)
             PositionsHistory.Insert(0, chickenTail.position);
+    }
 
+
+    private void FixedUpdate()
+    {
+        // Move forward
+        if (PlayerMovementDirection().magnitude > 0)
+        {
+            Vector3 nextPos = transform.position +
+                              PlayerMovementDirection().normalized * MoveSpeed * Time.fixedDeltaTime;
+            rb.MovePosition(nextPos);
+            isMove = true;
+            // transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(PlayerMovementDirection().normalized),0.1f);
+            chickenVisual.rotation = Quaternion.Slerp(chickenVisual.rotation,
+                Quaternion.LookRotation(PlayerMovementDirection().normalized), 0.1f);
+            _chickenAnimationController.SetSpeed(1);
+        }
+        else
+        {
+            isMove = false;
+            _chickenAnimationController.SetSpeed(0);
+        }
+        
+        
+        
         if (BodyParts.Count <= 0 || PositionsHistory.Count <= 0)
             return;
-
         // Move body parts
         for (var i = 0; i < BodyParts.Count; i++)
         {
@@ -63,38 +86,19 @@ public class Chicken : MonoSingleton<Chicken>
             chipElement.transform.position += moveDirection.normalized * BodySpeed * Time.deltaTime;
             // Rotate body towards the point along the snakes path
             // if(Vector3.Dot(moveDirection,chipElement.transform.forward) > 0)
-                chipElement.transform.rotation = Quaternion.Slerp(chipElement.transform.rotation,Quaternion.LookRotation(moveDirection.normalized * BodySpeed),0.05f);
+            moveDirection.y = 0;
+            chipElement.transform.rotation = Quaternion.Slerp(chipElement.transform.rotation,Quaternion.LookRotation(moveDirection.normalized * BodySpeed),0.1f);
             chipElement.SetSpeedAnim(1);
         }
 
         if (PositionsHistory.Count > (BodyParts.Count) * Distance)
             PositionsHistory.RemoveRange((BodyParts.Count - 1) * Distance,
                 PositionsHistory.Count - (BodyParts.Count - 1) * Distance);
-    }
 
-
-    private void FixedUpdate()
-    {
-        // Move forward
-        if (PlayerMovementDirection().magnitude > 0)
-        {
-            Vector3 nextPos = transform.position +
-                              PlayerMovementDirection().normalized * MoveSpeed * Time.fixedDeltaTime;
-            rb.MovePosition(nextPos);
-            isMove = true;
-            // transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(PlayerMovementDirection().normalized),0.1f);
-            chickenVisual.rotation = Quaternion.Slerp(chickenVisual.rotation,
-                Quaternion.LookRotation(PlayerMovementDirection().normalized), 0.1f);
-            _chickenAnimationController.SetSpeed(1);
-        }
-        else
-        {
-            isMove = false;
-            _chickenAnimationController.SetSpeed(0);
-        }
 
         // Store position history
     }
+
 
     Vector3 PlayerMovementDirection()
     {
