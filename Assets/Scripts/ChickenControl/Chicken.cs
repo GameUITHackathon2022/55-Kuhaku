@@ -63,7 +63,7 @@ public class Chicken : MonoSingleton<Chicken>
             chipElement.transform.position += moveDirection.normalized * BodySpeed * Time.deltaTime;
             // Rotate body towards the point along the snakes path
             // if(Vector3.Dot(moveDirection,chipElement.transform.forward) > 0)
-                chipElement.transform.rotation = Quaternion.Slerp(chipElement.transform.rotation,Quaternion.LookRotation(moveDirection.normalized * BodySpeed),0.1f);
+                chipElement.transform.rotation = Quaternion.Slerp(chipElement.transform.rotation,Quaternion.LookRotation(moveDirection.normalized * BodySpeed),0.05f);
             chipElement.SetSpeedAnim(1);
         }
 
