@@ -236,7 +236,7 @@ public class EnemyBase : MonoBehaviour
 
     public virtual void OnDestroy()
     {
-
+        VFXManager.Instance.SpawnFXExplo(this.transform.position);
     }
 
     private void OnDrawGizmos()
