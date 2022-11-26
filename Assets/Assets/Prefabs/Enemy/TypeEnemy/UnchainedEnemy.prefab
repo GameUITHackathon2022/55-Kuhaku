@@ -126,6 +126,7 @@ MonoBehaviour:
     rangeAttack: 6
   weaponBase: {fileID: 0}
   animator: {fileID: 7646995046800723309}
+  timeExplore: 5
 --- !u!65 &742363329878213546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -526,6 +527,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyVisual2
       objectReference: {fileID: 0}
+    - target: {fileID: 223041369351418013, guid: c12945879dd33c84f8df668a8eaadc1e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c12945879dd33c84f8df668a8eaadc1e, type: 3}
 --- !u!1 &7383591368976824078 stripped
@@ -550,6 +556,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &829483297
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7383591368976824078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1.14, z: 0}
 --- !u!114 &7646995046800723309
 MonoBehaviour:
   m_ObjectHideFlags: 0
