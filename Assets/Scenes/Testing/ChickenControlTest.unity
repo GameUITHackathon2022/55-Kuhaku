@@ -587,10 +587,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 840363075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b8d97c537e353d4eaa739ed4a5f5121, type: 3}
+  m_Script: {fileID: 11500000, guid: c85814a0277544d44a5d1030d572d958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animal: {fileID: 67160556949620162, guid: 1846e565db6b332499f3eabe90f9215b, type: 3}
+  animal: {fileID: 0}
 --- !u!1 &931613810
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ GameObject:
   - component: {fileID: 931613814}
   - component: {fileID: 931613813}
   - component: {fileID: 931613812}
-  - component: {fileID: 931613811}
+  - component: {fileID: 931613816}
   m_Layer: 0
   m_Name: AnimalJail (1)
   m_TagString: Untagged
@@ -611,19 +611,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &931613811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931613810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b8d97c537e353d4eaa739ed4a5f5121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animal: {fileID: 67160556949620162, guid: 1846e565db6b332499f3eabe90f9215b, type: 3}
 --- !u!65 &931613812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -702,6 +689,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &931613816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931613810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85814a0277544d44a5d1030d572d958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animal: {fileID: 0}
 --- !u!1 &1173695255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,7 +1344,7 @@ GameObject:
   - component: {fileID: 1923313185}
   - component: {fileID: 1923313184}
   - component: {fileID: 1923313183}
-  - component: {fileID: 1923313182}
+  - component: {fileID: 1923313187}
   m_Layer: 0
   m_Name: AnimalJail (2)
   m_TagString: Untagged
@@ -1352,19 +1352,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1923313182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923313181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b8d97c537e353d4eaa739ed4a5f5121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animal: {fileID: 67160556949620162, guid: 1846e565db6b332499f3eabe90f9215b, type: 3}
 --- !u!65 &1923313183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1443,6 +1430,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1923313187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923313181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85814a0277544d44a5d1030d572d958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animal: {fileID: 0}
 --- !u!1 &1940232509
 GameObject:
   m_ObjectHideFlags: 0
