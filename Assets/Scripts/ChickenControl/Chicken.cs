@@ -23,7 +23,7 @@ public class Chicken : MonoSingleton<Chicken>
     [SerializeField] private Image healFill;
     
     // Lists
-    private List<Chip> BodyParts = new List<Chip>();
+    public List<Chip> BodyParts = new List<Chip>();
     [SerializeField]
     private List<Vector3> PositionsHistory = new List<Vector3>();
     private bool isMove = false;
@@ -47,8 +47,8 @@ public class Chicken : MonoSingleton<Chicken>
                 continue;
             }
             
-            if(Vector3.Distance(point, chipElement.transform.position) < 0.1f)
-                continue;
+            // if(Vector3.Distance(point, chipElement.transform.position) < 0.1f)
+            //     continue;
             // Move body towards the point along the snakes path
             Vector3 moveDirection = point - chipElement.transform.position;
             chipElement.transform.position += moveDirection.normalized * BodySpeed * Time.deltaTime;
@@ -100,9 +100,9 @@ public class Chicken : MonoSingleton<Chicken>
 
     public void OnTakeDamage(int damage)
     {
-        
+        defend.currentHp -= damage;
         float percent = ((float)defend.currentHp / defend.maxHp);
-        healFill.fillAmount = 1 - percent;
+        healFill.fillAmount = percent;
 
     }
 
