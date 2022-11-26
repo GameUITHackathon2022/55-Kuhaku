@@ -119,7 +119,7 @@ public class EnemyBase : MonoBehaviour
         Vector3 notCount = new Vector3(target.position.x, transform.position.y, target.position.z);
 
         headLook.localRotation = Quaternion.Slerp(transform.rotation, 
-            Quaternion.LookRotation((notCount - transform.position).normalized), 0.1f);
+            Quaternion.LookRotation((notCount - transform.position).normalized), 0.25f);
     }
 
     protected virtual void OnCollisionEnter(Collision collision)

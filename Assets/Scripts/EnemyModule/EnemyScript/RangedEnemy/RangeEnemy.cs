@@ -24,8 +24,10 @@ public class RangeEnemy : EnemyBase
 
     protected override bool InDistance()
     {
-        var dis = Vector3.Distance(Target.position, transform.position);
-        return dis <= enemyStatus.rangeAttack * 0.7f;
+        return base.InDistance();
+        //Vector3 vector3Dis = new Vector3(Target.transform.position.x, transform.position.y, Target.transform.position.z);
+        //var dis = Vector3.Distance(vector3Dis, transform.position);
+        //return dis <= enemyStatus.rangeAttack;
         
     }
 }
