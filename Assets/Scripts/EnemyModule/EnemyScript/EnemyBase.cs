@@ -1,6 +1,7 @@
 using Enemy;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -14,6 +15,8 @@ public class EnemyBase : MonoBehaviour
     public Transform Target => _crrTarget.transform;
     public DefendBase Crr => _crrTarget;
     public virtual EnemyType EnemyType => EnemyType.Melee;
+
+    public Image healthBar;
 
     private void Awake()
     {
@@ -75,7 +78,7 @@ public class EnemyBase : MonoBehaviour
     #endregion
 
     #region Enemy Status Handler
-    private int crrHp;
+    protected int crrHp;
     [Header("Enemy Status")]
     [SerializeField] Transform headLook;
     [SerializeField] protected EnemyStatus enemyStatus;
@@ -101,16 +104,25 @@ public class EnemyBase : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void EnemyTakeDmg(int dmg, UnityAction unityAction)
+    public virtual void EnemyTakeDmg(int dmg, UnityAction unityAction)
     {
         crrHp -= dmg;
         float percent = (float)crrHp / enemyStatus.enemyHp;
         //enemyUI.SetFillBar(percent);
+        healthBar.fillAmount = percent;
         SetTarget(Chicken.Instance.defend);
         unityAction?.Invoke();
         if(crrHp <= 0)
         {
             DestroyThisEnemy();
+        }
+    }
+
+    public void SetFill(float percent)
+    {
+        if (healthBar != null)
+        {
+            healthBar.fillAmount = percent;
         }
     }
 
