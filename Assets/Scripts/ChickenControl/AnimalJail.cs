@@ -10,6 +10,7 @@ public class AnimalJail : MonoBehaviour, ICollisionWithChicken
         var anim = Instantiate(animal);
         anim.transform.position = this.transform.position;
         chicken.AddChild(anim);
+        VFXManager.Instance.PlaySpawnChicken(new Vector3(chicken.transform.position.x,chicken.transform.position.y+1f,chicken.transform.position.z));
         Destroy(this.gameObject);
     }
 }

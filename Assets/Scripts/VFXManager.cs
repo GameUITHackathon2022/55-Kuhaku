@@ -8,6 +8,7 @@ public class VFXManager : MonoSingleton<VFXManager>
     [SerializeField] GameObject hitPlayerbyMeleeFX;
 
     [SerializeField] GameObject playerHitEnemy;
+    [SerializeField] GameObject FXSpawnChicken;
     public void PlayHitPlayerRanged(Vector3 target)
     {
         Instantiate(hitPlayerbyRangedFX, target, Quaternion.identity);
@@ -22,6 +23,12 @@ public class VFXManager : MonoSingleton<VFXManager>
     {
         Instantiate(playerHitEnemy, whoEnemy, Quaternion.identity);
     }
+    
+    public void PlaySpawnChicken(Vector3 whoEnemy)
+    {
+        Instantiate(FXSpawnChicken,whoEnemy,Quaternion.identity);
+    }
+
 
     private void Update()
     {

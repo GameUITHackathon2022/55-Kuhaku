@@ -8,7 +8,7 @@ public class ChipShooting : MonoBehaviour
 {
 
     public EnemyBase target;
-    public float shootRange = 0.1f;
+    public float shootRange = 0.01f;
     private float currentTime = 0;
 
     [SerializeField] private float range;
@@ -37,7 +37,7 @@ public class ChipShooting : MonoBehaviour
                 GameObject t = Instantiate(GameAssets.Instance.pfBullet);
                 t.transform.position = this.transform.position;
                 t.transform.rotation = Quaternion.LookRotation(dirToTarget,Vector3.up);
-                float time = dirToTarget.magnitude / 50;
+                float time = dirToTarget.magnitude / 80;
                 t.transform.DOMove(target.transform.position, time).OnComplete(() =>
                 {
                     target.EnemyTakeDmg(1,null);
