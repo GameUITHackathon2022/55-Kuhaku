@@ -54,20 +54,20 @@ public class Chicken : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
         // Move forward
         if (PlayerMovementDirection().magnitude > 0)
         {
-            Vector3 nextPos = transform.position + PlayerMovementDirection().normalized * MoveSpeed * Time.deltaTime;
+            Vector3 nextPos = transform.position + PlayerMovementDirection().normalized * MoveSpeed * Time.fixedDeltaTime;
             rb.MovePosition(nextPos);
-            if (PositionsHistory.Count > 0)
-            {
-                PositionsHistory.Insert(0, chickenTail.position);
-            }
-            else
-            {
-                PositionsHistory.Insert(0, chickenTail.position);
-            }
+            // if (PositionsHistory.Count > 0)
+            // {
+            //     PositionsHistory.Insert(0, chickenTail.position);
+            // }
+            // else
+            // {
+            //     PositionsHistory.Insert(0, chickenTail.position);
+            // }
+            PositionsHistory.Insert(0, chickenTail.position);
             isMove = true;
             transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(PlayerMovementDirection().normalized),0.1f);
 
