@@ -8,7 +8,7 @@ public class EnemyAnimatorController : MonoBehaviour
     [SerializeField] EnemyBase enemyBase;
     public void TriggerRun()
     {
-        if (animator.GetBool(AnimatorEnemy.doRun))
+        //if (animator.GetBool(AnimatorEnemy.doRun))
             animator.SetBool(AnimatorEnemy.doRun, true);
     }
 
@@ -26,7 +26,7 @@ public class EnemyAnimatorController : MonoBehaviour
 
     public void TriggerIddle()
     {
-        if(animator.GetBool(AnimatorEnemy.doRun))
+        //if(animator.GetBool(AnimatorEnemy.doRun))
             animator.SetBool(AnimatorEnemy.doRun, false);
     }
 
@@ -34,6 +34,9 @@ public class EnemyAnimatorController : MonoBehaviour
     {
         enemyBase.OnDoAttack();
     }
+
+
+
 }
 
 public static class AnimatorEnemy
