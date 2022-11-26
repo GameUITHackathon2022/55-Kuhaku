@@ -12,6 +12,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] protected DefendBase _player;
     [SerializeField] protected DefendBase _crrTarget;
     public Transform Target => _crrTarget.transform;
+    public DefendBase Crr => _crrTarget;
     public virtual EnemyType EnemyType => EnemyType.Melee;
 
     private void Awake()
