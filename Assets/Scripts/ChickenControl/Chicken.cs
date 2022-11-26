@@ -15,8 +15,6 @@ public class Chicken : MonoBehaviour
     public Transform chickenTail;
     public Rigidbody rb;
 
-    // References
-    public GameObject BodyPrefab;
     // Lists
     private List<GameObject> BodyParts = new List<GameObject>();
     [SerializeField]
