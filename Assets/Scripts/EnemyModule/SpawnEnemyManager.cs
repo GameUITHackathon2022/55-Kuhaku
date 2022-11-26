@@ -7,10 +7,13 @@ public class SpawnEnemyManager : MonoSingleton<SpawnEnemyManager>
 {
     [SerializeField] List<EnemyBase> currentEnemies = new List<EnemyBase>();
     public UnityAction onCompleteList;
-
+    [SerializeField] int totalEnemy;
+    public int TotalEnemy => totalEnemy;
+    public int currentEnemy => currentEnemies.Count;
     private void Start()
     {
-        
+        totalEnemy = currentEnemies.Count;
+        UIScoreGame.Instance.SetCurrentEnemies();
     }
 
     public void AssignFunc(UnityAction unityAction)
@@ -26,7 +29,8 @@ public class SpawnEnemyManager : MonoSingleton<SpawnEnemyManager>
     public void UnAssignEnemy(EnemyBase enemy)
     {
         currentEnemies.Remove(enemy);
-        if(currentEnemies.Count <= 0)
+        UIScoreGame.Instance.SetCurrentEnemies();
+        if (currentEnemies.Count <= 0)
         {
             OnEndList();
         }
@@ -37,19 +41,23 @@ public class SpawnEnemyManager : MonoSingleton<SpawnEnemyManager>
         onCompleteList?.Invoke();
     }
 
-    private void OnValidate()
+    public void SetEnemyNumber()
     {
         currentEnemies.Clear();
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(Enemy.EnemyDefine.enemyTag);
-        
-        foreach(var enemi in enemies)
+
+        foreach (var enemi in enemies)
         {
             var enemBase = enemi.GetComponent<EnemyBase>();
-            if(enemBase)
+            if (enemBase)
             {
                 AssignEnemyToList(enemBase);
             }
 
         }
+    }
+    private void OnValidate()
+    {
+        SetEnemyNumber();
     }
 }
