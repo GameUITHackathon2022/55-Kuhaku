@@ -15,6 +15,11 @@ public class BoomerangProjectile : DefaultProjectlie
 
     #endregion
 
+    public override void DmgUser()
+    {
+        base.DmgUser();
+    }
+
     #region Override Handler
     protected override void OnTriggerEnter(Collider collider)
     {
@@ -53,9 +58,8 @@ public class BoomerangProjectile : DefaultProjectlie
         tweener = transform.DOMove(target * rangeMulti, 1.2f)
             .OnComplete(() =>
             {
-            isForward = false;
-            //SetDirection(transform.position - enemyBase.transform.position);
-            //Debug.Log(${ transform.position - enemyBase.transform.position});
+                isForward = false;
+            
             }
             );
     }
