@@ -6,14 +6,18 @@ using static UnityEngine.GraphicsBuffer;
 [RequireComponent(typeof(Rigidbody))]
 public class EnemyBase : MonoBehaviour
 {
-    [SerializeField] protected DefendBase target;
-    public Transform Target => target.transform;
+    private static readonly float rangeToStop = 5f;
+    [SerializeField] protected DefendBase defaultTarget;
+    [SerializeField] protected DefendBase _player;
+    [SerializeField] protected DefendBase _crrTarget;
+    public Transform Target => _crrTarget.transform;
     public virtual EnemyType EnemyType => EnemyType.Melee;
 
     private void Awake()
     {
         crrHp = enemyStatus.enemyHp;
         EnemyTakeDmg(0, null);
+        isReadyAttack = false;
     }
 
     #region Enemy AI
@@ -21,7 +25,7 @@ public class EnemyBase : MonoBehaviour
 
     [SerializeField] protected Collider colliderEnemy;
     [SerializeField] protected Rigidbody thisRG;
-   
+    [SerializeField] protected bool isReadyAttack;
     protected virtual bool InDistance()
     {
         var dis = Vector3.Distance(Target.position, transform.position);
@@ -62,7 +66,7 @@ public class EnemyBase : MonoBehaviour
 
     public void SetTarget(DefendBase defendBase)
     {
-        this.target = defendBase;
+        this._crrTarget = defendBase;
     }
     #endregion
 
@@ -157,11 +161,21 @@ public class EnemyBase : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        if (Target == null)
+        if (_crrTarget == null)
             return;
+
         DoLookTarget(Target);
         OnPlayCoolDown();
         //if (transform.name == "Melee") { }
+
+        if (_player != null && _crrTarget == _player)
+        { 
+            if(Vector3.Distance(_player.transform.position, transform.position) >= rangeToStop)
+            {
+                SetTarget(defaultTarget);
+            }
+        }
+
         if (CanAttack)
         {
             //OnDoAttack();
