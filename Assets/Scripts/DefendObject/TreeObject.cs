@@ -21,11 +21,13 @@ public class TreeObject : DefendBase
         }
     }
 
+    public bool seen;
+
     private void Awake()
     {
         LEVEL = level;
     
-        //renderer = GetComponent<Renderer>();
+        renderer = GetComponent<Renderer>();
     }
 
     private void Start()
@@ -34,21 +36,26 @@ public class TreeObject : DefendBase
     }
 
 
-    //    private void Update()
-    //    {
-    //#if UNITY_EDITOR
-    //        if (ischeck)
-    //        {
-    //            if (renderer != null && renderer.isVisible)
-    //            {
-    //                Debug.Log("Object is visual");
-    //            }
-    //        }
-    //#endif
-    //    }
+    private void Update()
+    {
+
+        if (!seen)
+        {
+            if (renderer != null && renderer.isVisible)
+            {
+                seen = true;
+                //Debug.Log(" seen");
+            }
+        }
+
+    }
 
     public override void TakeDamage(float damage)
     {
+        if (!seen)
+        {
+            return;
+        }
         currentHp = maxHp - currentHp;
         this.transform.DOShakePosition(0.8f, new Vector3(0.1f, 0f, 0f));
         if (currentHp < 0)
