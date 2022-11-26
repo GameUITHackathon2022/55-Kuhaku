@@ -19,7 +19,6 @@ public class EnemyBase : MonoBehaviour
     {
         crrHp = enemyStatus.enemyHp;
         EnemyTakeDmg(0, null);
-        isReadyAttack = false;
         _crrTarget = defaultTarget;
 
         //defaultRotation = Quaternion.headLook.transform.rotation;
@@ -30,7 +29,6 @@ public class EnemyBase : MonoBehaviour
 
     [SerializeField] protected Collider colliderEnemy;
     [SerializeField] protected Rigidbody thisRG;
-    [SerializeField] protected bool isReadyAttack;
     protected virtual bool InDistance()
     {
         var dis = Vector3.Distance(Target.position, transform.position);
@@ -117,7 +115,7 @@ public class EnemyBase : MonoBehaviour
 
     protected void DoLookTarget(Transform target)
     {
-        Vector3 notCount = new Vector3(transform.position.x, transform.position.y, target.position.z);
+        Vector3 notCount = new Vector3(target.position.x, transform.position.y, target.position.z);
 
         headLook.localRotation = Quaternion.Slerp(transform.rotation, 
             Quaternion.LookRotation((notCount - transform.position).normalized), 0.1f);
