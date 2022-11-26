@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class TreeObject : DefendBase
 {
@@ -23,25 +24,33 @@ public class TreeObject : DefendBase
     private void Awake()
     {
         LEVEL = level;
+    
         //renderer = GetComponent<Renderer>();
     }
 
-//    private void Update()
-//    {
-//#if UNITY_EDITOR
-//        if (ischeck)
-//        {
-//            if (renderer != null && renderer.isVisible)
-//            {
-//                Debug.Log("Object is visual");
-//            }
-//        }
-//#endif
-//    }
+    private void Start()
+    {
+        this.transform.DOShakePosition(0.8f, new Vector3(0.1f, 0f, 0f)).SetLoops(-1);
+    }
+
+
+    //    private void Update()
+    //    {
+    //#if UNITY_EDITOR
+    //        if (ischeck)
+    //        {
+    //            if (renderer != null && renderer.isVisible)
+    //            {
+    //                Debug.Log("Object is visual");
+    //            }
+    //        }
+    //#endif
+    //    }
 
     public override void TakeDamage(int damage)
     {
         currentHp = maxHp - currentHp;
+        this.transform.DOShakePosition(0.8f, new Vector3(0.1f, 0f, 0f));
         if (currentHp < 0)
         { 
             currentHp = 0;
