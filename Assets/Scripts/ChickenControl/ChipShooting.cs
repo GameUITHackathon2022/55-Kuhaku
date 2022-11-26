@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class ChipShooting : MonoBehaviour
@@ -37,7 +36,7 @@ public class ChipShooting : MonoBehaviour
             {
                 GameObject t = Instantiate(GameAssets.Instance.pfBullet);
                 t.transform.position = this.transform.position;
-                t.transform.rotation = quaternion.LookRotation(dirToTarget,Vector3.up);
+                t.transform.rotation = Quaternion.LookRotation(dirToTarget,Vector3.up);
                 float time = dirToTarget.magnitude / 50;
                 t.transform.DOMove(target.transform.position, time).OnComplete(() =>
                 {
