@@ -1,58 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpawnEnemyManager : MonoSingleton<SpawnEnemyManager>
 {
-    [SerializeField] List<EnemyBase> enemiesPref = new List<EnemyBase>();
-
-    public DefendBase playerBase;
-
-    private List<EnemyBase> currentEnemies;
+    [SerializeField] List<EnemyBase> currentEnemies = new List<EnemyBase>();
+    public UnityAction onCompleteList;
 
     private void Start()
     {
-        currentEnemies = new List<EnemyBase>();
+        
     }
 
-    private void Update()
+    public void AssignFunc(UnityAction unityAction)
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            GetRandomEnemy();
-        }
-
-        if(Input.GetKeyDown(KeyCode.K))
-        {
-            if(currentEnemies.Count > 0)
-            {
-                currentEnemies[currentEnemies.Count - 1].DestroyThisEnemy();
-            }
-        }
-    }
-
-    
-
-    public EnemyBase GetRandomEnemy()
-    {
-        if(enemiesPref.Count == 0)
-        {
-            Debug.LogError("You did not assign any enemi");
-        }
-        int index = Random.Range(0, enemiesPref.Count);
-        var enemy = Instantiate(enemiesPref[index]);
-        AssignEnemyToList(enemy);
-        return enemy;
+        onCompleteList += unityAction;
     }
 
     private void AssignEnemyToList(EnemyBase enemy)
     {
         currentEnemies.Add(enemy);
-
     }
 
     public void UnAssignEnemy(EnemyBase enemy)
     {
         currentEnemies.Remove(enemy);
+        if(currentEnemies.Count <= 0)
+        {
+            OnEndList();
+        }
+    }
+
+    public void OnEndList()
+    {
+        onCompleteList?.Invoke();
+    }
+
+    private void OnValidate()
+    {
+        currentEnemies.Clear();
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(Enemy.EnemyDefine.enemyTag);
+        
+        foreach(var enemi in enemies)
+        {
+            var enemBase = enemi.GetComponent<EnemyBase>();
+            if(enemBase)
+            {
+                AssignEnemyToList(enemBase);
+            }
+
+        }
     }
 }
