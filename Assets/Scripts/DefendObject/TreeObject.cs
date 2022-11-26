@@ -30,7 +30,7 @@ public class TreeObject : DefendBase
 
     private void Start()
     {
-        this.transform.DOShakePosition(0.8f, new Vector3(0.1f, 0f, 0f)).SetLoops(-1);
+        //this.transform.DOShakePosition(0.8f, new Vector3(0.1f, 0f, 0f)).SetLoops(-1);
     }
 
 
