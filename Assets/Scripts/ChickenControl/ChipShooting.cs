@@ -9,7 +9,7 @@ public class ChipShooting : MonoBehaviour
 {
 
     public EnemyBase target;
-    public float shootRange = 0.5f;
+    public float shootRange = 0.1f;
     private float currentTime = 0;
 
     [SerializeField] private float range;
