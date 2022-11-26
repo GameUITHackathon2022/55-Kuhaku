@@ -43,7 +43,7 @@ public class ObjectHealth
     {
         if (_level >= 0 && _level < health.Count)
         {
-            return health[_level]
+            return health[_level];
         }
         return -1;
     }
