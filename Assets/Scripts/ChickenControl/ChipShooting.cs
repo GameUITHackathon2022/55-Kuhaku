@@ -42,7 +42,7 @@ public class ChipShooting : MonoBehaviour
                 float time = dirToTarget.magnitude / 80;
                 t.transform.DOMove(target.transform.position, time).OnComplete(() =>
                 {
-                    target.EnemyTakeDmg(0,null);
+                    target.EnemyTakeDmg(1,null);
                     Destroy(t.gameObject);
                 });
                 currentTime = 0;

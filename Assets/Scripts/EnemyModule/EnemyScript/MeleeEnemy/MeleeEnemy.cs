@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Enemy;
 using DG.Tweening;
+using UnityEngine.Events;
+
 public class MeleeEnemy : EnemyBase
 {
 
@@ -19,6 +21,20 @@ public class MeleeEnemy : EnemyBase
     {
         base.Start();
         StartCoroutine(CountDownToExplore());
+    }
+    
+    public override void EnemyTakeDmg(int dmg, UnityAction unityAction)
+    {
+        crrHp -= dmg;
+        float percent = (float)crrHp / enemyStatus.enemyHp;
+        //enemyUI.SetFillBar(percent);
+        Debug.Log(percent);
+        healthBar.fillAmount = percent;
+        unityAction?.Invoke();
+        if(crrHp <= 0)
+        {
+            DestroyThisEnemy();
+        }
     }
 
     protected override void OnChasePlayer()

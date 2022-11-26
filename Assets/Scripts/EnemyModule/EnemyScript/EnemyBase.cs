@@ -78,7 +78,7 @@ public class EnemyBase : MonoBehaviour
     #endregion
 
     #region Enemy Status Handler
-    private int crrHp;
+    protected int crrHp;
     [Header("Enemy Status")]
     [SerializeField] Transform headLook;
     [SerializeField] protected EnemyStatus enemyStatus;
@@ -104,7 +104,7 @@ public class EnemyBase : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void EnemyTakeDmg(int dmg, UnityAction unityAction)
+    public virtual void EnemyTakeDmg(int dmg, UnityAction unityAction)
     {
         crrHp -= dmg;
         float percent = (float)crrHp / enemyStatus.enemyHp;
