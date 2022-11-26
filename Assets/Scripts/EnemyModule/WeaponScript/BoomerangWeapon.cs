@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BoomerangWeapon : RangedWeapon
 {
+    [SerializeField] float rangeMultiply;
+
     private ActiveWeapon activeWeapon;
 
     private ActiveWeapon boomerangWeapon 
@@ -22,12 +24,12 @@ public class BoomerangWeapon : RangedWeapon
         }
     }
 
-    public override void DmgUser()
+    public override void DmgUser() 
     {
         if(boomerangWeapon != null)
         {
             boomerangWeapon.gameObject.SetActive(true);
-            boomerangWeapon.SetStat();
+            boomerangWeapon.SetStat(rangeMultiply);
         }
     }
 
@@ -40,6 +42,12 @@ public class BoomerangWeapon : RangedWeapon
     private IEnumerator StartToAttack()
     {
         yield return new WaitForSeconds(enemyBase.GetCoolDown);
-        boomerangWeapon.SetStat();
+        boomerangWeapon.SetStat(rangeMultiply);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward * rangeMultiply);
     }
 }

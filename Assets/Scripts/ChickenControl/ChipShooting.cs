@@ -38,14 +38,17 @@ public class ChipShooting : MonoBehaviour
                 GameObject t = Instantiate(GameAssets.Instance.pfBullet);
                 t.transform.position = this.transform.position;
                 t.transform.rotation = quaternion.LookRotation(dirToTarget,Vector3.up);
-                t.transform.DOMove(target.transform.position, 1f).OnComplete(() =>
+                float time = dirToTarget.magnitude / 20;
+                t.transform.DOMove(target.transform.position, time).OnComplete(() =>
                 {
                     Destroy(t.gameObject);
                 });
                 currentTime = 0;
             }
-                
+            
             Debug.DrawRay(this.transform.position,dirToTarget,Color.green);
+            dirToTarget.y = 0;
+            this.transform.rotation = Quaternion.LookRotation(dirToTarget.normalized);
         }
     }
 
