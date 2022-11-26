@@ -34,7 +34,7 @@ public class EnemyBase : MonoBehaviour
         }
         else
         {
-            thisRG.velocity = Vector3.zero;
+            //thisRG.velocity = Vector3.zero;
         }
     }
 

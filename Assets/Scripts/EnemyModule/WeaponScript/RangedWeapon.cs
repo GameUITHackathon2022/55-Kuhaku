@@ -7,7 +7,6 @@ using UnityEngine;
 public class RangedWeapon : WeaponBase
 {
     public ActiveWeapon activeWeaponPrefab;
-
     public override float GetDmg()
     {
         return activeWeaponPrefab.GetDmg();
