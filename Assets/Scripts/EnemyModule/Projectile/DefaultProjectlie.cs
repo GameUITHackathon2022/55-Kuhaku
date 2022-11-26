@@ -21,10 +21,10 @@ public class DefaultProjectlie : ActiveWeapon
          rb.velocity = Dir * speed;
     }
 
-    protected override void OnTriggerEnter(Collider collision)
+    protected override void OnTriggerEnter(Collider collider)
     {
-        Debug.Log(collision.gameObject.name);
-        if(collision.gameObject.CompareTag("Player"))
+        Debug.Log(collider.gameObject.name);
+        if(collider.gameObject.CompareTag("Player"))
         {
             PlayerManager.Instance.UserData.SetDmg(GetDmg());
             Destroy(this.gameObject);

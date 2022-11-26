@@ -7,65 +7,25 @@ using Unity.VisualScripting;
 
 public class BoomerangProjectile : DefaultProjectlie
 {
-    [SerializeField] float timeFloating;
-    private float timeMovingFoward;
     #region Boomerang Handler
     public override void SetHolder(EnemyBase enemy)
     {
         base.SetHolder(enemy);
     }
 
-    public void DoAttackTarget(Transform target)
-    {
-        
-    }
-
-    public override void SetParentWeapon(RangedWeapon weaponBase)
-    {
-        base.SetParentWeapon(weaponBase);
-    }
-
-    private void ShootForward(Transform Target)
-    {
-        if(enemyBase == null)
-        {
-            Debug.LogError("You dont set EnemyBase");
-            this.gameObject.SetActive(false);
-            return;
-        }
-
-        Vector3 dirToTarget = (Target.position - base.enemyBase.transform.position);
-        Vector3 realDir = new Vector3(dirToTarget.x, 0, dirToTarget.z);
-
-        timeMovingFoward = timeFloating;
-
-        SetDirection(realDir);
-    }
-
-    private void ShootBackward()
-    {
-        if (enemyBase == null)
-        {
-            Debug.LogError("You dont set EnemyBase");
-            this.gameObject.SetActive(false);
-            return;
-        }
-
-    }
-
     #endregion
 
     #region Override Handler
-    protected override void OnTriggerEnter(Collider collision)
+    protected override void OnTriggerEnter(Collider collider)
     {
         //base.OnTriggerEnter(collision);
-        if (collision.gameObject.CompareTag(EnemyDefine.playerTag))
+        if (collider.gameObject.CompareTag(EnemyDefine.playerTag))
         {
             PlayerManager.Instance.UserData.SetDmg(GetDmg());
             
         }
 
-        if(collision.gameObject.GetInstanceID() == this.GetInstanceID())
+        if(collider.gameObject.GetInstanceID() == this.GetInstanceID())
         {
             //this.gameObject.SetActive(false);   
             var _wp = weaponBelong as BoomerangWeapon; 
@@ -75,33 +35,48 @@ public class BoomerangProjectile : DefaultProjectlie
             }
         }
 
-        if(collision.gameObject.CompareTag(EnemyDefine.terrainTag))
+        if(collider.gameObject.CompareTag(EnemyDefine.terrainTag))
         {
+            Debug.Log("SOLO");
             DoOnHit();
         }
     }
 
-   
-    public override void SetStat()
+    private Tween tweener;
+    private bool isForward;
+    public override void SetStat(float rangeMulti)
     {
-        ShootForward(enemyBase.Target);
+        Vector3 target = enemyBase.transform.forward;
+        isForward = true;
+        //SetDirection(Vector3.zero);
+        Debug.Log($"Do {target}");
+        tweener = transform.DOMove(target * rangeMulti, 1.2f)
+            .OnComplete(() =>
+            {
+            isForward = false;
+            //SetDirection(transform.position - enemyBase.transform.position);
+            //Debug.Log(${ transform.position - enemyBase.transform.position});
+            }
+            );
     }
 
     protected override void Update()
     {
-        timeMovingFoward -= Time.deltaTime;
-        if(timeMovingFoward < 0)
+        if(isForward)
         {
-            DoOnHit();
+            return;
         }
-        base.Update();
+        //base.Update();
+        transform.position = Vector3.Lerp(transform.position, enemyBase.transform.position, Time.deltaTime);
     }
 
     public override void DoOnHit()
     {
-        //base.DoOnHit();
-        Debug.Log("Do Backward");
-        ShootBackward();
+        if(tweener != null)
+        {
+            tweener.Kill();
+            isForward = false;
+        }
     }
     #endregion
 }

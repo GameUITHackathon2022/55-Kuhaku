@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
 //Weapon only trigger once: projectile ... ?
 public class ActiveWeapon : WeaponBase
 {
@@ -20,13 +20,13 @@ public class ActiveWeapon : WeaponBase
     }
 
     protected Vector3 Dir => dir;
-
-    public virtual void SetStat()
+    private Tweener tween;
+    public virtual void SetStat(float range)
     {
 
     }
 
-    protected virtual void OnTriggerEnter(Collider collision)
+    protected virtual void OnTriggerEnter(Collider collider)
     {
 
     }
