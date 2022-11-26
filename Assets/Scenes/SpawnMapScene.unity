@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 187262644}
   - component: {fileID: 187262643}
   - component: {fileID: 187262642}
-  - component: {fileID: 187262641}
+  - component: {fileID: 187262646}
   m_Layer: 0
   m_Name: AnimalJail (2)
   m_TagString: Untagged
@@ -187,18 +187,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &187262641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187262640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b8d97c537e353d4eaa739ed4a5f5121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &187262642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -277,6 +265,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &187262646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187262640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85814a0277544d44a5d1030d572d958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animal: {fileID: 3653168715391814002, guid: 21f12ebd1c8a40140839c7edc7649126, type: 3}
 --- !u!1001 &264658210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -494,7 +495,7 @@ GameObject:
   - component: {fileID: 405373927}
   - component: {fileID: 405373926}
   - component: {fileID: 405373925}
-  - component: {fileID: 405373924}
+  - component: {fileID: 405373929}
   m_Layer: 0
   m_Name: AnimalJail (3)
   m_TagString: Untagged
@@ -502,18 +503,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &405373924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405373923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b8d97c537e353d4eaa739ed4a5f5121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &405373925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -592,6 +581,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &405373929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405373923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85814a0277544d44a5d1030d572d958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animal: {fileID: 3653168715391814002, guid: 21f12ebd1c8a40140839c7edc7649126, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,7 +942,7 @@ GameObject:
   - component: {fileID: 563991688}
   - component: {fileID: 563991687}
   - component: {fileID: 563991686}
-  - component: {fileID: 563991685}
+  - component: {fileID: 563991690}
   m_Layer: 0
   m_Name: AnimalJail (1)
   m_TagString: Untagged
@@ -948,18 +950,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &563991685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563991684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b8d97c537e353d4eaa739ed4a5f5121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &563991686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1038,6 +1028,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &563991690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563991684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85814a0277544d44a5d1030d572d958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animal: {fileID: 3653168715391814002, guid: 21f12ebd1c8a40140839c7edc7649126, type: 3}
 --- !u!1 &619830764
 GameObject:
   m_ObjectHideFlags: 0
