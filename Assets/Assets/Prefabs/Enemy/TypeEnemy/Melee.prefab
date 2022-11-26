@@ -48,6 +48,7 @@ MonoBehaviour:
     dmg: 6.84
     rangeDmg: 0.86
   enemyBase: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!1 &7975720805667736301
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +63,7 @@ GameObject:
   - component: {fileID: 7975720805667736300}
   - component: {fileID: 7975720805667736295}
   - component: {fileID: 7975720805667736294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Melee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
