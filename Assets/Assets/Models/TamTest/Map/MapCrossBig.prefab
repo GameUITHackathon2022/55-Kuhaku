@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5668151009356126588}
   m_Layer: 0
   m_Name: MapCrossBig
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b188a48ac94a947a428c45e763fbae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpanwPoint: {fileID: 0}
 --- !u!1001 &448551280859765063
 PrefabInstance:
   m_ObjectHideFlags: 0
