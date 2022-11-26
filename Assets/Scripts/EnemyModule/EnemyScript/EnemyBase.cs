@@ -43,6 +43,15 @@ public class EnemyBase : MonoBehaviour
         var dis = Vector3.Distance(vecto, transform.position);
         return dis <= enemyStatus.rangeAttack;
     }
+
+    private void InDistanceWithUser()
+    {
+        Vector3 vecto = new Vector3(_player.transform.position.x, transform.position.y, _player.transform.position.z);
+        var dis = Vector3.Distance(vecto, transform.position);
+        if( dis <= enemyStatus.rangeAttack)
+            SetTarget(Chicken.Instance.defend);
+
+    }
     
     protected bool CanAttack => InDistance() && timeCd <= 0;
 
@@ -57,6 +66,7 @@ public class EnemyBase : MonoBehaviour
         else
         {
             //thisRG.velocity = Vector3.zero;
+
         }
     }
 
@@ -127,7 +137,6 @@ public class EnemyBase : MonoBehaviour
         float percent = (float)crrHp / enemyStatus.enemyHp;
         //enemyUI.SetFillBar(percent);
         healthBar.fillAmount = percent;
-        SetTarget(Chicken.Instance.defend);
         unityAction?.Invoke();
 
         VFXManager.Instance.PlayHitPlayerMelee(transform.position);
@@ -221,6 +230,8 @@ public class EnemyBase : MonoBehaviour
                 animator.TriggerIddle();
             }
         }
+
+        InDistanceWithUser();
 
         if (CanAttack)
         {
