@@ -49,7 +49,7 @@ public class MeleeEnemy : EnemyBase
 
     public override void DestroyThisEnemy()
     {
-        //base.DestroyThisEnemy();
+        base.DestroyThisEnemy();
     }
 
     protected override void FixedUpdate()
@@ -77,6 +77,7 @@ public class MeleeEnemy : EnemyBase
         if(Vector3.Distance(chicken.transform.position,new Vector3(this.transform.position.x,chicken.transform.position.y,this.transform.position.z)) <= 3)
             chicken.OnTakeDamage(10);
         Destroy(Target.gameObject);
+        this.DestroyThisEnemy();
         Destroy(this.gameObject);
     }
 }
