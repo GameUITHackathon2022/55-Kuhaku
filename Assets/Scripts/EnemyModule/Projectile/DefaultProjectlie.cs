@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DefaultProjectlie : ActiveWeapon
 {
+    [SerializeField] protected Rigidbody rb;
     protected virtual void Start()
     {
 

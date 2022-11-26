@@ -42,12 +42,13 @@ public class BoomerangWeapon : RangedWeapon
     private IEnumerator StartToAttack()
     {
         yield return new WaitForSeconds(enemyBase.GetCoolDown);
-        boomerangWeapon.SetStat(rangeMultiply);
+        DmgUser();
+        //boomerangWeapon.SetStat(enemyBase.GetRange);
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, transform.position + transform.forward * rangeMultiply);
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward * enemyBase.GetRange);
     }
 }
