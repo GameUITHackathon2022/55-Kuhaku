@@ -7,6 +7,7 @@ using static UnityEngine.GraphicsBuffer;
 public class EnemyBase : MonoBehaviour
 {
     private static readonly float rangeToStop = 5f;
+    private Vector3 defaultRotation;
     [SerializeField] protected DefendBase defaultTarget;
     [SerializeField] protected DefendBase _player;
     [SerializeField] protected DefendBase _crrTarget;
@@ -18,6 +19,9 @@ public class EnemyBase : MonoBehaviour
         crrHp = enemyStatus.enemyHp;
         EnemyTakeDmg(0, null);
         isReadyAttack = false;
+        _crrTarget = defaultTarget;
+
+        //defaultRotation = Quaternion.headLook.transform.rotation;
     }
 
     #region Enemy AI
@@ -73,8 +77,9 @@ public class EnemyBase : MonoBehaviour
     #region Enemy Status Handler
     private float crrHp;
     [Header("Enemy Status")]
+    [SerializeField] Transform headLook;
     [SerializeField] protected EnemyStatus enemyStatus;
-    [SerializeField] protected EnemyUI enemyUI;
+    //[SerializeField] protected EnemyUI enemyUI;
     public virtual void SetStatsByConfig()
     {
 
@@ -100,7 +105,7 @@ public class EnemyBase : MonoBehaviour
     {
         crrHp -= dmg;
         float percent = crrHp / enemyStatus.enemyHp;
-        enemyUI.SetFillBar(percent);
+        //enemyUI.SetFillBar(percent);
 
         unityAction?.Invoke();
         if(crrHp <= 0)
@@ -111,9 +116,9 @@ public class EnemyBase : MonoBehaviour
 
     protected void DoLookTarget(Transform target)
     {
-        Vector3 notCount = new Vector3(target.position.x, transform.position.y, target.position.z);
+        Vector3 notCount = new Vector3(transform.position.x, transform.position.y, target.position.z);
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, 
+        headLook.localRotation = Quaternion.Slerp(transform.rotation, 
             Quaternion.LookRotation((notCount - transform.position).normalized), 0.1f);
     }
 
@@ -164,8 +169,8 @@ public class EnemyBase : MonoBehaviour
         if (_crrTarget == null)
             return;
 
-        DoLookTarget(Target);
         OnPlayCoolDown();
+        DoLookTarget(Target);
         //if (transform.name == "Melee") { }
 
         if (_player != null && _crrTarget == _player)
@@ -187,6 +192,7 @@ public class EnemyBase : MonoBehaviour
             OnChasePlayer();
         }
     }
+
     public virtual void OnDestroy()
     {
 

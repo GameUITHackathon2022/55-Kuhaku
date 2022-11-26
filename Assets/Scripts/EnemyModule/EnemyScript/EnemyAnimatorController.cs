@@ -30,6 +30,11 @@ public class EnemyAnimatorController : MonoBehaviour
         if(animator.GetBool(AnimatorEnemy.doRun))
             animator.SetBool(AnimatorEnemy.doRun, false);
     }
+
+    public void DoOnAttack()
+    {
+        enemyBase.OnDoAttack();
+    }
 }
 
 public static class AnimatorEnemy
