@@ -6,7 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 [RequireComponent(typeof(Rigidbody))]
 public class EnemyBase : MonoBehaviour
 {
-    [SerializeField] static readonly float rangeToStop = 5f;
+    [SerializeField] protected float rangeToStop = 5f;
     private Vector3 defaultRotation;
     [SerializeField] protected DefendBase defaultTarget;
     [SerializeField] protected DefendBase _player;
