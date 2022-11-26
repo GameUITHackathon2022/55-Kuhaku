@@ -5,7 +5,7 @@ using UnityEngine;
 //Weapon only trigger once: projectile ... ?
 public class ActiveWeapon : WeaponBase
 {
-    [SerializeField] RangedWeapon weaponBelong;
+    [SerializeField] protected RangedWeapon weaponBelong;
 
     private Vector3 dir;
     [SerializeField] protected float speed;
@@ -14,10 +14,22 @@ public class ActiveWeapon : WeaponBase
         this.dir = _dir;
     }
 
+    public virtual void SetParentWeapon(RangedWeapon weaponBase)
+    {
+        weaponBelong = weaponBase;
+    }
+
     protected Vector3 Dir => dir;
+
+    public virtual void SetStat()
+    {
+
+    }
 
     protected virtual void OnTriggerEnter(Collider collision)
     {
 
     }
+
+    public virtual void DoOnHit() { }
 }

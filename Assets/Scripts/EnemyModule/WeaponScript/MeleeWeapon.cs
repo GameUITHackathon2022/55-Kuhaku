@@ -17,6 +17,7 @@ public class MeleeWeapon : WeaponBase
         {
             if(col.gameObject.CompareTag("Player"))
             {
+                Debug.Log("hi");
                 PlayerManager.Instance.UserData.SetDmg(GetDmg());
                 return;
             }

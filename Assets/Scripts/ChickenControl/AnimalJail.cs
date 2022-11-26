@@ -10,7 +10,7 @@ public class AnimalJail : MonoBehaviour, ICollisionWithChicken
     {
         var anim = Instantiate(animal);
         anim.transform.position = this.transform.position;
-        chicken.AddChild(anim.gameObject);
+        chicken.AddChild(anim);
         Destroy(this.gameObject);
     }
 }

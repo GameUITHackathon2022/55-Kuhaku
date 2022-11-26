@@ -12,11 +12,15 @@ public class Chicken : MonoBehaviour
     public float SteerSpeed = 180;
     public float BodySpeed = 5;
     public int Distance = 10;
-    public Transform chickenTail;
-    public Rigidbody rb;
-
+    
+    [Header("Reference")]
+    [SerializeField] Transform chickenTail;
+    [SerializeField] Rigidbody rb;
+    [SerializeField] private ChickenAnimationController _chickenAnimationController;
+    
+    
     // Lists
-    private List<GameObject> BodyParts = new List<GameObject>();
+    private List<Chip> BodyParts = new List<Chip>();
     [SerializeField]
     private List<Vector3> PositionsHistory = new List<Vector3>();
 
@@ -34,17 +38,21 @@ public class Chicken : MonoBehaviour
         // Move body parts
         for (var i = 0; i < BodyParts.Count; i++)
         {
-            var body = BodyParts[i];
+            var chipElement = BodyParts[i];
             Vector3 point = PositionsHistory[Mathf.Clamp(i * Distance, 0, PositionsHistory.Count - 1)];
-            if (Vector3.Distance(point, body.transform.position) < 1 && !isMove)
+            if (Vector3.Distance(point, chipElement.transform.position) < 1 && !isMove)
+            {
+                chipElement.SetSpeedAnim(0);
                 continue;
-            else if(Vector3.Distance(point, body.transform.position) < 0.1f)
+            }
+            else if(Vector3.Distance(point, chipElement.transform.position) < 0.1f)
                 continue;
             // Move body towards the point along the snakes path
-            Vector3 moveDirection = point - body.transform.position;
-            body.transform.position += moveDirection.normalized * BodySpeed * Time.deltaTime;
+            Vector3 moveDirection = point - chipElement.transform.position;
+            chipElement.transform.position += moveDirection.normalized * BodySpeed * Time.deltaTime;
             // Rotate body towards the point along the snakes path
-            body.transform.rotation = Quaternion.LookRotation(moveDirection);
+            chipElement.transform.rotation = Quaternion.LookRotation(moveDirection);
+            chipElement.SetSpeedAnim(1);
         }
         
         if(PositionsHistory.Count > (BodyParts.Count-1) * Distance)
@@ -59,22 +67,15 @@ public class Chicken : MonoBehaviour
         {
             Vector3 nextPos = transform.position + PlayerMovementDirection().normalized * MoveSpeed * Time.fixedDeltaTime;
             rb.MovePosition(nextPos);
-            // if (PositionsHistory.Count > 0)
-            // {
-            //     PositionsHistory.Insert(0, chickenTail.position);
-            // }
-            // else
-            // {
-            //     PositionsHistory.Insert(0, chickenTail.position);
-            // }
             PositionsHistory.Insert(0, chickenTail.position);
             isMove = true;
             transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(PlayerMovementDirection().normalized),0.1f);
-
+            _chickenAnimationController.SetSpeed(1);
         }
         else
         {
             isMove = false;
+            _chickenAnimationController.SetSpeed(0);
         }
 
         // Store position history
@@ -88,7 +89,7 @@ public class Chicken : MonoBehaviour
         return baseDirection;
     }
     
-    public void AddChild(GameObject gObj) {
+    public void AddChild(Chip gObj) {
         // Instantiate body instance and
         // add it to the list
         BodyParts.Add(gObj);
