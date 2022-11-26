@@ -18,7 +18,7 @@ public class DefaultProjectlie : ActiveWeapon
     // Update is called once per frame
     protected virtual void Update()
     {
-        transform.Translate(Dir * speed * Time.deltaTime);
+         rb.velocity = Dir * speed;
     }
 
     protected override void OnTriggerEnter(Collider collision)

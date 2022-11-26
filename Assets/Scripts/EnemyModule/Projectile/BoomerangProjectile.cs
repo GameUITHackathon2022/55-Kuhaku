@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Enemy;
+using Unity.VisualScripting;
 
 public class BoomerangProjectile : DefaultProjectlie
 {
@@ -17,6 +18,11 @@ public class BoomerangProjectile : DefaultProjectlie
     public void DoAttackTarget(Transform target)
     {
         
+    }
+
+    public override void SetParentWeapon(RangedWeapon weaponBase)
+    {
+        base.SetParentWeapon(weaponBase);
     }
 
     private void ShootForward(Transform Target)
@@ -45,10 +51,6 @@ public class BoomerangProjectile : DefaultProjectlie
             return;
         }
 
-        Vector3 dirToBack = transform.position - base.enemyBase.transform.position;
-        Vector3 realDir = new Vector3(dirToBack.x, 0, dirToBack.z);
-
-        SetDirection(realDir);
     }
 
     #endregion
@@ -63,13 +65,24 @@ public class BoomerangProjectile : DefaultProjectlie
             
         }
 
-        if(collision.gameObject.CompareTag(EnemyDefine.enemyTag))
+        if(collision.gameObject.GetInstanceID() == this.GetInstanceID())
         {
+            //this.gameObject.SetActive(false);   
+            var _wp = weaponBelong as BoomerangWeapon; 
+            if(_wp)
+            {
+                _wp.ResetStat();
+            }
+        }
 
+        if(collision.gameObject.CompareTag(EnemyDefine.terrainTag))
+        {
+            DoOnHit();
         }
     }
 
-    protected override void Start()
+   
+    public override void SetStat()
     {
         ShootForward(enemyBase.Target);
     }
@@ -79,13 +92,16 @@ public class BoomerangProjectile : DefaultProjectlie
         timeMovingFoward -= Time.deltaTime;
         if(timeMovingFoward < 0)
         {
-            ShootBackward();
+            DoOnHit();
         }
+        base.Update();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public override void DoOnHit()
     {
-        
+        //base.DoOnHit();
+        Debug.Log("Do Backward");
+        ShootBackward();
     }
     #endregion
 }

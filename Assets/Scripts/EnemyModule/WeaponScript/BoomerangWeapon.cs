@@ -12,9 +12,10 @@ public class BoomerangWeapon : RangedWeapon
         {
             if(activeWeapon == null)
             {
-                activeWeapon = Instantiate(activeWeaponPrefab, base.enemyBase.transform);
+                activeWeapon = Instantiate(activeWeaponPrefab, base.enemyBase.transform.position, Quaternion.identity);
+                activeWeapon.SetHolder(enemyBase);
+                activeWeapon.SetParentWeapon(this);
                 activeWeapon.gameObject.SetActive(false);
-                
             }
 
             return activeWeapon;
@@ -26,19 +27,19 @@ public class BoomerangWeapon : RangedWeapon
         if(boomerangWeapon != null)
         {
             boomerangWeapon.gameObject.SetActive(true);
-            //boomerangWeapon.DmgUser();
+            boomerangWeapon.SetStat();
         }
     }
 
     public void ResetStat()
     {
         boomerangWeapon.gameObject.SetActive(false);
-        
+        StartCoroutine(StartToAttack());
     }
 
     private IEnumerator StartToAttack()
     {
         yield return new WaitForSeconds(enemyBase.GetCoolDown);
-
+        boomerangWeapon.SetStat();
     }
 }

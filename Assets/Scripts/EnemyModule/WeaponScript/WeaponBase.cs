@@ -8,7 +8,7 @@ public class WeaponBase : MonoBehaviour
 {
     [SerializeField] protected WeaponStatus weaponBase;
     [SerializeField] protected EnemyBase enemyBase;
-
+    [SerializeField] protected Rigidbody rb;
     public virtual void SetHolder(EnemyBase enemy) => enemyBase = enemy;
     public virtual TypeWeapon TypeWeapon => TypeWeapon.Default;
     public virtual float GetDmg() {
