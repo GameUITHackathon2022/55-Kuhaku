@@ -42,10 +42,10 @@ public class BullAttack : MeleeEnemy
         DoWait = false;
     }
 
-    protected override void Update()
+    protected override void FixedUpdate()
     {
         if(!DoWait)
-            base.Update();
+            base.FixedUpdate();
     }
 
     protected override void OnChasePlayer()

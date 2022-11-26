@@ -136,7 +136,7 @@ public class EnemyBase : MonoBehaviour
         SetStatus();
     }
 
-    protected virtual void Update()
+    protected virtual void FixedUpdate()
     {
         DoLookTarget(player);
         OnPlayCoolDown();
