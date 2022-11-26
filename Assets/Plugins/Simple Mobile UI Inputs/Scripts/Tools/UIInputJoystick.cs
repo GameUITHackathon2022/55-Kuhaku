@@ -4,6 +4,7 @@ using UI_InputSystem.Base;
 
 namespace UI_Inputs
 {
+    
     public class UIInputJoystick : UIInput<JoyStickAction, Vector2>
     {
         [Header("---------Joystick Action-----------")]
