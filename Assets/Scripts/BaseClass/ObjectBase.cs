@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +20,10 @@ public enum SpecificObjectID
 
 public class ObjectBase : MonoBehaviour
 {
+    /// <summary>
+    /// level tính từ 0
+    /// Khi đem lên UI thì cộng 1
+    /// </summary>
     public int level;
 
     public int currentHp;
@@ -29,4 +33,14 @@ public class ObjectBase : MonoBehaviour
     public virtual ObjectTypeID ObjectTypeID => ObjectTypeID.NONE;
 
     public virtual SpecificObjectID SpecificObjectID => SpecificObjectID.NONE;
+
+    public virtual int LEVEL
+    {
+        get => this.level;
+        set => this.level = value;
+    }
+    public virtual void OnDead()
+    {
+
+    }
 }
