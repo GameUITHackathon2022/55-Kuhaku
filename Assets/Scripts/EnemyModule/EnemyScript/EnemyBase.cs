@@ -24,7 +24,7 @@ public class EnemyBase : MonoBehaviour
         EnemyTakeDmg(0, null);
         _crrTarget = defaultTarget;
         _player = Chicken.Instance.defend;
-        //defaultRotation = Quaternion.headLook.transform.rotation;
+        
     }
 
     #region Enemy AI
@@ -187,11 +187,14 @@ public class EnemyBase : MonoBehaviour
         //if (transform.name == "Melee") { }
 
         if (_player != null && _crrTarget == _player)
-        { 
-            if(Vector3.Distance(_player.transform.position, transform.position) >= rangeToStop)
+        {
+            var v = new Vector3(_player.transform.position.x, transform.position.y, _player.transform.position.z);
+            var distance = Vector3.Distance(v, transform.position);
+            if (distance > rangeToStop * 0.95f)
             {
                 SetTarget(defaultTarget);
             }
+            
         }
 
         if (CanAttack)

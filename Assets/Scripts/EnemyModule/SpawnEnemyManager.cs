@@ -39,6 +39,7 @@ public class SpawnEnemyManager : MonoSingleton<SpawnEnemyManager>
     public void OnEndList()
     {
         onCompleteList?.Invoke();
+        GameManager.Instance.OnNextMap();
     }
 
     public void SetEnemyNumber()
