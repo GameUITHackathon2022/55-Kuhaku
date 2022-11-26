@@ -6,7 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 [RequireComponent(typeof(Rigidbody))]
 public class EnemyBase : MonoBehaviour
 {
-    private static readonly float rangeToStop = 5f;
+    [SerializeField] static readonly float rangeToStop = 5f;
     private Vector3 defaultRotation;
     [SerializeField] protected DefendBase defaultTarget;
     [SerializeField] protected DefendBase _player;
@@ -20,7 +20,7 @@ public class EnemyBase : MonoBehaviour
         crrHp = enemyStatus.enemyHp;
         EnemyTakeDmg(0, null);
         _crrTarget = defaultTarget;
-        //_player = Chicken.Instance.
+        _player = Chicken.Instance.defend;
         //defaultRotation = Quaternion.headLook.transform.rotation;
     }
 
@@ -202,6 +202,9 @@ public class EnemyBase : MonoBehaviour
         Gizmos.color = Color.red;
 
         Gizmos.DrawWireSphere(this.transform.position, enemyStatus.rangeAttack);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(this.transform.position, rangeToStop);
     }
 
     #endregion
