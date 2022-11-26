@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PlayerManager : MonoSingleton<PlayerManager>
+public class PlayerManager : DefendBase
 {
     public UserData UserData;
     public TextMeshProUGUI text;

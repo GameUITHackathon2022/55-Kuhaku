@@ -10,7 +10,7 @@ public class ObjectStatConfigs : ScriptableObject
  
     public ObjectHealthConfigs healthConfigs;
 
-    internal int GetHealthBySpecificID(SpecificObjectID specificObjectID, int level)
+    internal float GetHealthBySpecificID(SpecificObjectID specificObjectID, int level)
     {
         return healthConfigs.GetHealthBySpecificID(specificObjectID, level);
     }
@@ -21,9 +21,9 @@ public class ObjectHealthConfigs
 {
     public List<ObjectHealth> objectHealths;
 
-    public int GetHealthBySpecificID(SpecificObjectID _specificObjectID, int _level)
+    public float GetHealthBySpecificID(SpecificObjectID _specificObjectID, int _level)
     {
-        int health = -1;
+        float health = -1;
 
         ObjectHealth objectHealth = objectHealths.Find(x => x.specificObjectID == _specificObjectID);
 
@@ -37,9 +37,9 @@ public class ObjectHealthConfigs
 public class ObjectHealth
 {
     public SpecificObjectID specificObjectID;
-    public List<int> health;
+    public List<float> health;
 
-    internal int GetHealthByLevel(int _level)
+    internal float GetHealthByLevel(int _level)
     {
         if (_level >= 0 && _level < health.Count)
         {
