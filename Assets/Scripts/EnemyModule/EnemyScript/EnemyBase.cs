@@ -7,7 +7,7 @@ using static UnityEngine.GraphicsBuffer;
 [RequireComponent(typeof(Rigidbody))]
 public class EnemyBase : MonoBehaviour
 {
-    [SerializeField] protected float rangeToStop = 5f;
+    //[SerializeField] protected float rangeToStop = 5f;
     private Vector3 defaultRotation;
     [SerializeField] protected DefendBase defaultTarget;
     [SerializeField] protected DefendBase _player;
@@ -21,8 +21,8 @@ public class EnemyBase : MonoBehaviour
     private float _rangeStalkEnd;
     private void Awake()
     {
-        _rangeStalkStart = rangeToStop;
-        _rangeStalkEnd = rangeToStop * 1.25f;
+        //_rangeStalkStart = rangeToStop;
+        //_rangeStalkEnd = rangeToStop * 1.25f;
         crrHp = enemyStatus.enemyHp;
         EnemyTakeDmg(0, null);
         _crrTarget = defaultTarget;
@@ -80,15 +80,15 @@ public class EnemyBase : MonoBehaviour
     {
         if(defendBase == defaultTarget)
         {
-            rangeToStop = _rangeStalkStart;
-            animator.TriggerIddle();
+            //rangeToStop = _rangeStalkStart;
+            //animator.TriggerIddle();
 
         }
         else
         {
-            animator.TriggerRun();
+            //animator.TriggerRun();
 
-            rangeToStop = _rangeStalkEnd;
+            //rangeToStop = _rangeStalkEnd;
         }
         this._crrTarget = defendBase;
     }
@@ -206,13 +206,20 @@ public class EnemyBase : MonoBehaviour
 
         if (_player != null && _crrTarget == _player)
         {
-            var v = new Vector3(_player.transform.position.x, transform.position.y, _player.transform.position.z);
-            var distance = Vector3.Distance(v, transform.position);
-            if (distance > rangeToStop)
+            //var v = new Vector3(_player.transform.position.x, transform.position.y, _player.transform.position.z);
+            //var distance = Vector3.Distance(v, transform.position);
+            //if (distance > rangeToStop)
+            //{
+            //    SetTarget(defaultTarget);
+            //}
+            if (thisRG.velocity.magnitude > 0)
             {
-                SetTarget(defaultTarget);
+                animator.TriggerRun();
             }
-            
+            else
+            {
+                animator.TriggerIddle();
+            }
         }
 
         if (CanAttack)
@@ -239,7 +246,7 @@ public class EnemyBase : MonoBehaviour
         Gizmos.DrawWireSphere(this.transform.position, enemyStatus.rangeAttack);
 
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(this.transform.position, rangeToStop);
+        //Gizmos.DrawWireSphere(this.transform.position, rangeToStop);
     }
 
     #endregion
