@@ -26,8 +26,12 @@ public class BoomerangProjectile : DefaultProjectlie
         //base.OnTriggerEnter(collision);
         if (collider.gameObject.CompareTag(EnemyDefine.playerTag))
         {
-            PlayerManager.Instance.UserData.SetDmg(GetDmg());
             
+            var baseDefend = collider.gameObject.GetComponent<DefendBase>();
+            if (baseDefend != null)
+            {
+                baseDefend.TakeDamage(1);
+            }
         }
 
         if(collider.gameObject.GetInstanceID() == this.GetInstanceID())

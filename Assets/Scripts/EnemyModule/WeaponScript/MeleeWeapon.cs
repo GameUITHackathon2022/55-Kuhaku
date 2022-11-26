@@ -15,10 +15,15 @@ public class MeleeWeapon : WeaponBase
 
         foreach(var col in collider)
         {
-            if(col.gameObject.CompareTag("Player"))
+            if(col.gameObject.CompareTag(EnemyDefine.playerTag))
             {
-                Debug.Log("hi");
-                PlayerManager.Instance.UserData.SetDmg(GetDmg());
+                //Debug.Log("hi");
+                //PlayerManager.Instance.UserData.SetDmg(GetDmg());
+                var enemyBase = col.gameObject.GetComponent<DefendBase>();
+                if(enemyBase != null)
+                {
+                    enemyBase.TakeDamage(1);
+                }
                 return;
             }
         }
