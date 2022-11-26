@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class TreeObject : DefendBase
 {
+    /// <summary>
+    /// Used to check visible
+    /// </summary>
+    Renderer renderer;
     public override SpecificObjectID SpecificObjectID => SpecificObjectID.TREE;
     public override int LEVEL
     {
@@ -19,7 +23,21 @@ public class TreeObject : DefendBase
     private void Awake()
     {
         LEVEL = level;
+        //renderer = GetComponent<Renderer>();
     }
+
+//    private void Update()
+//    {
+//#if UNITY_EDITOR
+//        if (ischeck)
+//        {
+//            if (renderer != null && renderer.isVisible)
+//            {
+//                Debug.Log("Object is visual");
+//            }
+//        }
+//#endif
+//    }
 
     public override void TakeDamage(int damage)
     {
