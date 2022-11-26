@@ -12,6 +12,7 @@ public class VFXManager : MonoSingleton<VFXManager>
     [SerializeField] GameObject treeCollapse;
     [SerializeField] GameObject FXSpawnChicken;
     [SerializeField] GameObject FXEnemyExp;
+    [SerializeField] GameObject FXEnemyDie;
     public void PlayHitPlayerRanged(Vector3 target)
     {
         Instantiate(hitPlayerbyRangedFX, target, Quaternion.identity);
@@ -47,6 +48,12 @@ public class VFXManager : MonoSingleton<VFXManager>
     {
         Instantiate(FXEnemyExp, pos, Quaternion.identity);
     }
+    
+    public void SpawnFXEnemyDie(Vector3 pos)
+    {
+        Instantiate(FXEnemyDie, pos, Quaternion.identity);
+    }
+
 
     private void Update()
     {

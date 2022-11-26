@@ -36,6 +36,7 @@ public class ChipShooting : MonoBehaviour
             currentTime += Time.deltaTime;
             if (currentTime > shootRange)
             {
+                SoundManager.Instance.Play("Machine",AudioType.FX,0.7f);
                 GameObject t = Instantiate(GameAssets.Instance.pfBullet);
                 t.transform.position = this.transform.position;
                 t.transform.rotation = Quaternion.LookRotation(dirToTarget,Vector3.up);
