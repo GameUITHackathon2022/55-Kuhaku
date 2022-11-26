@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UI_InputSystem.Base;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class Chicken : MonoBehaviour
 {
@@ -12,20 +13,26 @@ public class Chicken : MonoBehaviour
     public float SteerSpeed = 180;
     public float BodySpeed = 5;
     public int Distance = 10;
+    public int chickenHealth;
+    private int currentHealth;
     
     [Header("Reference")]
     [SerializeField] Transform chickenTail;
+    [SerializeField] Transform chickenVisual;
     [SerializeField] Rigidbody rb;
     [SerializeField] private ChickenAnimationController _chickenAnimationController;
-    
+    [SerializeField] private Image healFill;
     
     // Lists
     private List<Chip> BodyParts = new List<Chip>();
     [SerializeField]
     private List<Vector3> PositionsHistory = new List<Vector3>();
-
     private bool isMove = false;
-    
+
+    private void Awake()
+    {
+        currentHealth = chickenHealth;
+    }
 
     // Start is called before the first frame update
 
@@ -70,7 +77,8 @@ public class Chicken : MonoBehaviour
             rb.MovePosition(nextPos);
             PositionsHistory.Insert(0, chickenTail.position);
             isMove = true;
-            transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(PlayerMovementDirection().normalized),0.1f);
+            // transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(PlayerMovementDirection().normalized),0.1f);
+            chickenVisual.rotation = Quaternion.Slerp(chickenVisual.rotation,Quaternion.LookRotation(PlayerMovementDirection().normalized),0.1f);
             _chickenAnimationController.SetSpeed(1);
         }
         else
@@ -94,6 +102,14 @@ public class Chicken : MonoBehaviour
         // Instantiate body instance and
         // add it to the list
         BodyParts.Add(gObj);
+    }
+
+    public void OnTakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        float percent = ((float)currentHealth / chickenHealth);
+        healFill.fillAmount = 1 - percent;
+
     }
 
     private void OnTriggerEnter(Collider other)
