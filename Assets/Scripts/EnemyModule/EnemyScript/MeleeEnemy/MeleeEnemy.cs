@@ -76,7 +76,10 @@ public class MeleeEnemy : EnemyBase
         var chicken = Chicken.Instance;
         if(Vector3.Distance(chicken.transform.position,new Vector3(this.transform.position.x,chicken.transform.position.y,this.transform.position.z)) <= 3)
             chicken.OnTakeDamage(10);
+        if(defaultTarget is TreeObject)
+            GroundHandler.Instance.RemoveTree(defaultTarget as TreeObject);
         Destroy(Target.gameObject);
         Destroy(this.gameObject);
+        
     }
 }
