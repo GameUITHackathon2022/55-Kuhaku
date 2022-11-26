@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoSingleton<PlayerManager>
 {
-    //public UserData UserData;
+    public UserData UserData;
     public TextMeshProUGUI text;
 
     [SerializeField]
