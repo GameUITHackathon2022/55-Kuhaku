@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4022075843712890635}
   - component: {fileID: 4022075843712890634}
   - component: {fileID: 4022075843712890633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy_Melee
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fea391f512a09e4f9cd6b4e556bf4f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeToStop: 5
+  rangeToStop: 14.57
   defaultTarget: {fileID: 0}
   _player: {fileID: 0}
   _crrTarget: {fileID: 0}
@@ -87,7 +87,7 @@ MonoBehaviour:
   thisRG: {fileID: 4022075843712890634}
   headLook: {fileID: 4022075844663174234}
   enemyStatus:
-    enemyHp: 12
+    enemyHp: 10000
     enemySpeed: 5
     cdEnemey: 3.34
     rangeAttack: 8

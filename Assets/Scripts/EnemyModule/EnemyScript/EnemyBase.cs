@@ -32,6 +32,8 @@ public class EnemyBase : MonoBehaviour
 
     [SerializeField] protected Collider colliderEnemy;
     [SerializeField] protected Rigidbody thisRG;
+
+    public Rigidbody GetRigidbody => thisRG;
     protected virtual bool InDistance()
     {
         Vector3 vecto = new Vector3(Target.position.x, transform.position.y, Target.position.z);
@@ -131,7 +133,7 @@ public class EnemyBase : MonoBehaviour
         Vector3 notCount = new Vector3(target.position.x, transform.position.y, target.position.z);
 
         headLook.localRotation = Quaternion.Slerp(transform.rotation, 
-            Quaternion.LookRotation((notCount - transform.position).normalized), 0.25f);
+            Quaternion.LookRotation((notCount - transform.position).normalized), 1f);
     }
 
     protected virtual void OnCollisionEnter(Collision collision)
