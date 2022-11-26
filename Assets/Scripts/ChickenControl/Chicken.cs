@@ -13,10 +13,9 @@ public class Chicken : MonoSingleton<Chicken>
     public float SteerSpeed = 180;
     public float BodySpeed = 5;
     public int Distance = 10;
-    public int chickenHealth;
-    private int currentHealth;
-    
-    [Header("Reference")]
+
+    [Header("Reference")] 
+    public ChickDefend defend;
     [SerializeField] Transform chickenTail;
     [SerializeField] Transform chickenVisual;
     [SerializeField] Rigidbody rb;
@@ -28,11 +27,6 @@ public class Chicken : MonoSingleton<Chicken>
     [SerializeField]
     private List<Vector3> PositionsHistory = new List<Vector3>();
     private bool isMove = false;
-
-    private void Awake()
-    {
-        currentHealth = chickenHealth;
-    }
     
     // Start is called before the first frame update
 
@@ -106,8 +100,8 @@ public class Chicken : MonoSingleton<Chicken>
 
     public void OnTakeDamage(int damage)
     {
-        currentHealth -= damage;
-        float percent = ((float)currentHealth / chickenHealth);
+        
+        float percent = ((float)defend.currentHp / defend.maxHp);
         healFill.fillAmount = 1 - percent;
 
     }

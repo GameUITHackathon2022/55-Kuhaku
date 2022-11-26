@@ -986,6 +986,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChickenBase
       objectReference: {fileID: 0}
+    - target: {fileID: 4701150949918335988, guid: fd7abd6993b1a0e47a24e0cebc7c5722,
+        type: 3}
+      propertyPath: defend
+      value: 
+      objectReference: {fileID: 2112800177}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd7abd6993b1a0e47a24e0cebc7c5722, type: 3}
 --- !u!20 &2006372616 stripped
@@ -994,6 +999,27 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 622629829729003182}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2112800171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2736815694647831135, guid: fd7abd6993b1a0e47a24e0cebc7c5722,
+    type: 3}
+  m_PrefabInstance: {fileID: 1991809071}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2112800177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112800171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443b6a756395a3248b954be40716d14c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  currentHp: 0
+  maxHp: 100
 --- !u!1001 &622629829729003182
 PrefabInstance:
   m_ObjectHideFlags: 0
