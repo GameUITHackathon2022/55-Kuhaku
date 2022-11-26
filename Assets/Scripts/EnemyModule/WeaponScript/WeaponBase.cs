@@ -36,7 +36,7 @@ namespace Enemy
     [System.Serializable]
     public class WeaponStatus
     {
-        public float dmg;
+        public int dmg;
         public float rangeDmg;
     }
 }

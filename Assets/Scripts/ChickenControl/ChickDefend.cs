@@ -5,8 +5,8 @@ using UnityEngine;
 public class ChickDefend : DefendBase
 {
     
-    public override void TakeDamage(float damage)
+    public override void TakeDamage(int damage)
     {
-        Chicken.Instance.OnTakeDamage((int)damage);
+        Chicken.Instance.OnTakeDamage(damage);
     }
 }

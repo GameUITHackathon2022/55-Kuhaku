@@ -20,7 +20,7 @@ public class EnemyBase : MonoBehaviour
         crrHp = enemyStatus.enemyHp;
         EnemyTakeDmg(0, null);
         _crrTarget = defaultTarget;
-
+        //_player = Chicken.Instance.
         //defaultRotation = Quaternion.headLook.transform.rotation;
     }
 
@@ -75,7 +75,7 @@ public class EnemyBase : MonoBehaviour
     #endregion
 
     #region Enemy Status Handler
-    private float crrHp;
+    private int crrHp;
     [Header("Enemy Status")]
     [SerializeField] Transform headLook;
     [SerializeField] protected EnemyStatus enemyStatus;
@@ -101,12 +101,12 @@ public class EnemyBase : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void EnemyTakeDmg(float dmg, UnityAction unityAction)
+    public void EnemyTakeDmg(int dmg, UnityAction unityAction)
     {
         crrHp -= dmg;
-        float percent = crrHp / enemyStatus.enemyHp;
+        float percent = (float)crrHp / enemyStatus.enemyHp;
         //enemyUI.SetFillBar(percent);
-
+        SetTarget(Chicken.Instance.defend);
         unityAction?.Invoke();
         if(crrHp <= 0)
         {
@@ -132,7 +132,6 @@ public class EnemyBase : MonoBehaviour
 
     }
 
-    public virtual float GetDmg => enemyStatus.cdEnemey;
     public virtual float GetCoolDown => enemyStatus.cdEnemey;
     public virtual float GetRange => enemyStatus.rangeAttack;
     #endregion
@@ -239,10 +238,10 @@ namespace Enemy
     [System.Serializable]
     public class EnemyStatus
     {
-        public float enemyHp;
-        public float enemySpeed;
+        public int enemyHp;
+        public int enemySpeed;
 
         public float cdEnemey;
-        public float rangeAttack;
+        public int rangeAttack;
     }
 }
