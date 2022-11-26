@@ -6,6 +6,8 @@ public class SpawnEnemyManager : MonoSingleton<SpawnEnemyManager>
 {
     [SerializeField] List<EnemyBase> enemiesPref = new List<EnemyBase>();
 
+    public DefendBase playerBase;
+
     private List<EnemyBase> currentEnemies;
 
     private void Start()
