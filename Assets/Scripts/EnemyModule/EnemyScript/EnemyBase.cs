@@ -111,6 +111,7 @@ public class EnemyBase : MonoBehaviour
 
     #region Ref Weapon
     [SerializeField] protected WeaponBase weaponBase;
+    public WeaponBase WeaponBase => weaponBase;
     public void SetWeaponFromConfig(WeaponBase weaponBase)
     {
         this.weaponBase = weaponBase;
@@ -143,7 +144,7 @@ public class EnemyBase : MonoBehaviour
         if (CanAttack)
         {
             //thisRG.velocity = Vector3.zero;
-            Debug.Log($"Hi {Time.deltaTime}");
+            //Debug.Log($"Hi {Time.deltaTime}");
             OnDoAttack();
         }
         else
