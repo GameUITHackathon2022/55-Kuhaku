@@ -13,10 +13,9 @@ public class EnemyBase : MonoBehaviour
     [Header("AI Component")]
 
     [SerializeField] protected Collider colliderEnemy;
-    [SerializeField] Transform dirLooking;
     [SerializeField] protected Rigidbody thisRG;
 
-    protected bool InDistance()
+    protected virtual bool InDistance()
     {
         var dis = Vector3.Distance(player.position, transform.position);
         return dis <= enemyStatus.rangeAttack;
@@ -41,11 +40,11 @@ public class EnemyBase : MonoBehaviour
     private float timeCd;
     public virtual void OnDoAttack()
     {
-        if(timeCd <= 0)
+        if(InDistance())
         {
             thisRG.Sleep();
             weaponBase.DmgUser();
-            ResetStat();
+            //ResetStat();
         }
     
     }
@@ -94,7 +93,7 @@ public class EnemyBase : MonoBehaviour
     protected void DoLookTarget(Transform target)
     {
         Vector3 notCount = new Vector3(target.position.x, transform.position.y, target.position.z);
-        //dirLooking.LookAt(target.position, -Vector3.up);
+
         transform.rotation = Quaternion.Slerp(transform.rotation, 
             Quaternion.LookRotation((notCount - transform.position).normalized), 0.1f);
     }
@@ -148,9 +147,9 @@ public class EnemyBase : MonoBehaviour
         //if (transform.name == "Melee") { }
         if (CanAttack)
         {
-            //thisRG.velocity = Vector3.zero;
-            //Debug.Log($"Hi {Time.deltaTime}");
-            OnDoAttack();
+            //OnDoAttack();
+            animator.TriggerAttack();
+            ResetStat();
         }
         else
         { 
@@ -171,7 +170,9 @@ public class EnemyBase : MonoBehaviour
 
     #endregion
 
-
+    #region Animator Handler
+    [SerializeField] protected EnemyAnimatorController animator;
+    #endregion
 }
 
 namespace Enemy
