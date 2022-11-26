@@ -8,6 +8,8 @@ public class VFXManager : MonoSingleton<VFXManager>
     [SerializeField] GameObject hitPlayerbyMeleeFX;
 
     [SerializeField] GameObject playerHitEnemy;
+    [SerializeField] GameObject spawnFX;
+    [SerializeField] GameObject treeCollapse;
     public void PlayHitPlayerRanged(Vector3 target)
     {
         Instantiate(hitPlayerbyRangedFX, target, Quaternion.identity);
@@ -23,12 +25,22 @@ public class VFXManager : MonoSingleton<VFXManager>
         Instantiate(playerHitEnemy, whoEnemy, Quaternion.identity);
     }
 
+    public void SpawnFX(Vector3 pos)
+    {
+        Instantiate(spawnFX, pos, spawnFX.transform.rotation);
+    }
+
+    public void SpawnTreeCollapseFX(Vector3 pos)
+    {
+        Instantiate(treeCollapse, pos, Quaternion.identity);
+    }
+
     private void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.M))
-        //{
-        //    PlayHitEnemy(Vector3.zero);
-        //        //new Vector3(Random.Range(-5, 5), Random.Range(0, 2), Random.Range(-5, 5)));
-        //}
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SpawnFX(Vector3.zero);
+            //new Vector3(Random.Range(-5, 5), Random.Range(0, 2), Random.Range(-5, 5)));
+        }
     }
 }

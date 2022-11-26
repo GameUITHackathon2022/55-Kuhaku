@@ -10,26 +10,10 @@ public class MeleeWeapon : WeaponBase
 
     public override void DmgUser()
     {
-        //base.DmgUser();
-        //Collider[] collider = Physics.OverlapSphere(enemyBase.transform.position, enemyBase.GetRange);
-
-        //foreach(var col in collider)
-        //{
-        //    if(col.gameObject.CompareTag(EnemyDefine.playerTag))
-        //    {
-        //        //Debug.Log("hi");
-        //        //PlayerManager.Instance.UserData.SetDmg(GetDmg());
-        //        var enemyBase = col.gameObject.GetComponent<DefendBase>();
-        //        if(enemyBase != null)
-        //        {
-        //            enemyBase.TakeDamage(1);
-        //        }
-        //        return;
-        //    }
-        //}
         if(enemyBase.Target)
         {
-            enemyBase.Crr.TakeDamage((int)weaponBase.dmg);
+            enemyBase.Crr.TakeDamage(weaponBase.dmg);
+           // VFXManager.Instance.PlayHitPlayerMelee(enemyBase.Crr.transform);
         }
     }
 }

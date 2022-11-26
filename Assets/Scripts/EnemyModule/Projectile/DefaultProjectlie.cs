@@ -31,11 +31,11 @@ public class DefaultProjectlie : ActiveWeapon
             var baseDefend = collider.gameObject.GetComponent<DefendBase>();
             if(baseDefend != null)
             {
-                baseDefend.TakeDamage(1);
-            }
+                baseDefend.TakeDamage(weaponBase.dmg);
 
-            Destroy(this.gameObject);
+            }
+            //Destroy(this.gameObject);
         }
-        //Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
 }
