@@ -1,0 +1,680 @@
+{
+    "FilePath": "Scenes/GlobalScenes/S42_20/battle_04",
+    "ScenePath": "30X30_2uv",
+    "Leader": {
+        "leaderPos": {
+            "x": -20.0,
+            "y": 0.0,
+            "z": 0.0
+        },
+        "moveDir": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+        },
+        "leaderRotationY": 90.0
+    },
+    "Obts": [],
+    "Monsters": [
+        {
+            "name": "14",
+            "path": "Assets/Resources/Monsters/14.prefab",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 7.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.3000001907348633,
+                "y": 1.2999999523162842,
+                "z": 1.3000001907348633
+            },
+            "cfgId": 14,
+            "patrolRadios": 5.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        },
+        {
+            "name": "14 (1)",
+            "path": "Assets/Resources/Monsters/14.prefab",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -7.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.3000001907348633,
+                "y": 1.2999999523162842,
+                "z": 1.3000001907348633
+            },
+            "cfgId": 14,
+            "patrolRadios": 5.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        },
+        {
+            "name": "14 (2)",
+            "path": "Assets/Resources/Monsters/14.prefab",
+            "position": {
+                "x": 5.0,
+                "y": 0.0,
+                "z": 7.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.3000001907348633,
+                "y": 1.2999999523162842,
+                "z": 1.3000001907348633
+            },
+            "cfgId": 14,
+            "patrolRadios": 5.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        },
+        {
+            "name": "14 (3)",
+            "path": "Assets/Resources/Monsters/14.prefab",
+            "position": {
+                "x": 5.0,
+                "y": 0.0,
+                "z": -7.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.3000001907348633,
+                "y": 1.2999999523162842,
+                "z": 1.3000001907348633
+            },
+            "cfgId": 14,
+            "patrolRadios": 5.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        },
+        {
+            "name": "14 (4)",
+            "path": "Assets/Resources/Monsters/14.prefab",
+            "position": {
+                "x": 10.0,
+                "y": 0.0,
+                "z": 7.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.3000001907348633,
+                "y": 1.2999999523162842,
+                "z": 1.3000001907348633
+            },
+            "cfgId": 14,
+            "patrolRadios": 5.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        },
+        {
+            "name": "14 (5)",
+            "path": "Assets/Resources/Monsters/14.prefab",
+            "position": {
+                "x": 10.0,
+                "y": 0.0,
+                "z": -7.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.3000001907348633,
+                "y": 1.2999999523162842,
+                "z": 1.3000001907348633
+            },
+            "cfgId": 14,
+            "patrolRadios": 5.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        },
+        {
+            "name": "52 (1)",
+            "path": "Assets/Resources/Monsters/52.prefab",
+            "position": {
+                "x": 10.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.700000524520874,
+                "y": 1.7000000476837159,
+                "z": 1.700000524520874
+            },
+            "cfgId": 52,
+            "patrolRadios": 0.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        },
+        {
+            "name": "52",
+            "path": "Assets/Resources/Monsters/52.prefab",
+            "position": {
+                "x": 2.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.700000524520874,
+                "y": 1.7000000476837159,
+                "z": 1.700000524520874
+            },
+            "cfgId": 52,
+            "patrolRadios": 0.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        },
+        {
+            "name": "14 (6)",
+            "path": "Assets/Resources/Monsters/14.prefab",
+            "position": {
+                "x": 5.0,
+                "y": 0.0,
+                "z": -7.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.3000001907348633,
+                "y": 1.2999999523162842,
+                "z": 1.3000001907348633
+            },
+            "cfgId": 14,
+            "patrolRadios": 5.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        },
+        {
+            "name": "14 (7)",
+            "path": "Assets/Resources/Monsters/14.prefab",
+            "position": {
+                "x": 2.0,
+                "y": 0.0,
+                "z": -12.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.3000001907348633,
+                "y": 1.2999999523162842,
+                "z": 1.3000001907348633
+            },
+            "cfgId": 14,
+            "patrolRadios": 5.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        },
+        {
+            "name": "14 (8)",
+            "path": "Assets/Resources/Monsters/14.prefab",
+            "position": {
+                "x": 8.0,
+                "y": 0.0,
+                "z": -12.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.3000001907348633,
+                "y": 1.2999999523162842,
+                "z": 1.3000001907348633
+            },
+            "cfgId": 14,
+            "patrolRadios": 5.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        },
+        {
+            "name": "14 (9)",
+            "path": "Assets/Resources/Monsters/14.prefab",
+            "position": {
+                "x": 2.0,
+                "y": 0.0,
+                "z": 13.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.3000001907348633,
+                "y": 1.2999999523162842,
+                "z": 1.3000001907348633
+            },
+            "cfgId": 14,
+            "patrolRadios": 5.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        },
+        {
+            "name": "14 (10)",
+            "path": "Assets/Resources/Monsters/14.prefab",
+            "position": {
+                "x": 8.0,
+                "y": 0.0,
+                "z": 13.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.3000001907348633,
+                "y": 1.2999999523162842,
+                "z": 1.3000001907348633
+            },
+            "cfgId": 14,
+            "patrolRadios": 5.0,
+            "trackPlayer": false,
+            "followPlayer": false,
+            "beatBack": false
+        }
+    ],
+    "MiniBosses": [],
+    "Bosses": [],
+    "RoleJs": [
+        {
+            "path": "RoleJ",
+            "roleID": 1,
+            "roleType": 0,
+            "fixedRoleId": false,
+            "position": {
+                "x": -10.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.000000238418579,
+                "y": 1.0,
+                "z": 1.000000238418579
+            }
+        },
+        {
+            "path": "RoleJ_Gold",
+            "roleID": 1,
+            "roleType": 3,
+            "fixedRoleId": false,
+            "position": {
+                "x": -10.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.000000238418579,
+                "y": 1.0,
+                "z": 1.000000238418579
+            }
+        }
+    ],
+    "Props": [
+        {
+            "path": "HP",
+            "position": {
+                "x": -4.889999866485596,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.5,
+                "y": 1.5,
+                "z": 1.5
+            }
+        },
+        {
+            "path": "PropTeJi",
+            "position": {
+                "x": -10.0,
+                "y": 0.0,
+                "z": 5.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            }
+        }
+    ],
+    "XianJing": [
+        {
+            "path": "penhuo",
+            "position": {
+                "x": 7.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "type": 2,
+            "args": [
+                1.0,
+                3.0
+            ]
+        },
+        {
+            "path": "penhuo",
+            "position": {
+                "x": -7.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "type": 2,
+            "args": [
+                1.0,
+                3.0
+            ]
+        },
+        {
+            "path": "penhuo",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -7.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "type": 2,
+            "args": [
+                1.0,
+                3.0
+            ]
+        },
+        {
+            "path": "penhuo",
+            "position": {
+                "x": 10.0,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "type": 2,
+            "args": [
+                1.0,
+                3.0
+            ]
+        },
+        {
+            "path": "penhuo",
+            "position": {
+                "x": -10.0,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "type": 2,
+            "args": [
+                1.0,
+                3.0
+            ]
+        },
+        {
+            "path": "penhuo",
+            "position": {
+                "x": 10.0,
+                "y": 0.0,
+                "z": 10.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "type": 2,
+            "args": [
+                1.0,
+                3.0
+            ]
+        },
+        {
+            "path": "penhuo",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 7.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "type": 2,
+            "args": [
+                1.0,
+                3.0
+            ]
+        },
+        {
+            "path": "penhuo",
+            "position": {
+                "x": -10.0,
+                "y": 0.0,
+                "z": 10.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "type": 2,
+            "args": [
+                1.0,
+                3.0
+            ]
+        }
+    ],
+    "NPC": [],
+    "Grasses": [
+        {
+            "path": "Grass",
+            "position": {
+                "x": 12.140000343322754,
+                "y": 0.0,
+                "z": 11.890000343322754
+            },
+            "rotation": {
+                "x": 0.0000025044780613825425,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            }
+        },
+        {
+            "path": "Grass",
+            "position": {
+                "x": -11.100000381469727,
+                "y": 0.0,
+                "z": -12.9399995803833
+            },
+            "rotation": {
+                "x": 0.0000025044780613825425,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            }
+        },
+        {
+            "path": "Grass",
+            "position": {
+                "x": 8.109999656677246,
+                "y": 0.0,
+                "z": -12.5
+            },
+            "rotation": {
+                "x": 0.0000025044780613825425,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            }
+        },
+        {
+            "path": "Grass",
+            "position": {
+                "x": -6.769999980926514,
+                "y": 0.0,
+                "z": 7.139999866485596
+            },
+            "rotation": {
+                "x": 0.0000025044780613825425,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            }
+        }
+    ],
+    "Waves": [],
+    "MonsterPoints": [],
+    "MonsterPrefabInfos": []
+}

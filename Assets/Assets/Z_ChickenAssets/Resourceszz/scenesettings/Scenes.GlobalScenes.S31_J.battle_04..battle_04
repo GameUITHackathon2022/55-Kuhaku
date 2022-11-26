@@ -1,0 +1,2332 @@
+{
+    "FilePath": "Scenes/GlobalScenes/S31_J/battle_04",
+    "ScenePath": "30X30_2uv",
+    "Leader": {
+        "leaderPos": {
+            "x": -20.0,
+            "y": 0.0,
+            "z": 0.0
+        },
+        "moveDir": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+        },
+        "leaderRotationY": 90.0
+    },
+    "Obts": [],
+    "Monsters": [],
+    "MiniBosses": [],
+    "Bosses": [],
+    "RoleJs": [
+        {
+            "path": "RoleJ",
+            "roleID": 7,
+            "roleType": 0,
+            "fixedRoleId": true,
+            "position": {
+                "x": -10.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.000000238418579,
+                "y": 1.0,
+                "z": 1.000000238418579
+            }
+        },
+        {
+            "path": "RoleJ_Gold",
+            "roleID": 1,
+            "roleType": 3,
+            "fixedRoleId": false,
+            "position": {
+                "x": -10.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 270.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.000000238418579,
+                "y": 1.0,
+                "z": 1.000000238418579
+            }
+        }
+    ],
+    "Props": [],
+    "XianJing": [],
+    "NPC": [],
+    "Grasses": [],
+    "Waves": [
+        {
+            "name": "1",
+            "Monsters": [
+                {
+                    "name": "24",
+                    "path": "Assets/Resources/Monsters/24.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 24,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "24 (1)",
+                    "path": "Assets/Resources/Monsters/24.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 24,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "24 (2)",
+                    "path": "Assets/Resources/Monsters/24.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 24,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "24 (3)",
+                    "path": "Assets/Resources/Monsters/24.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 24,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "24 (4)",
+                    "path": "Assets/Resources/Monsters/24.prefab",
+                    "position": {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": 3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 24,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "24 (5)",
+                    "path": "Assets/Resources/Monsters/24.prefab",
+                    "position": {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": -4.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 24,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "24 (6)",
+                    "path": "Assets/Resources/Monsters/24.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 24,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                }
+            ],
+            "MiniBosses": [],
+            "Bosses": [],
+            "Props": []
+        },
+        {
+            "name": "2",
+            "Monsters": [
+                {
+                    "name": "43",
+                    "path": "Assets/Resources/Monsters/43.prefab",
+                    "position": {
+                        "x": -6.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.7000006437301636,
+                        "y": 1.7000000476837159,
+                        "z": 1.7000006437301636
+                    },
+                    "cfgId": 43,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "16",
+                    "path": "Assets/Resources/Monsters/16.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 16,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "16 (1)",
+                    "path": "Assets/Resources/Monsters/16.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 16,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "16 (2)",
+                    "path": "Assets/Resources/Monsters/16.prefab",
+                    "position": {
+                        "x": 9.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 16,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "16 (3)",
+                    "path": "Assets/Resources/Monsters/16.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 16,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "16 (4)",
+                    "path": "Assets/Resources/Monsters/16.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 16,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "16 (5)",
+                    "path": "Assets/Resources/Monsters/16.prefab",
+                    "position": {
+                        "x": 9.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 16,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "16 (6)",
+                    "path": "Assets/Resources/Monsters/16.prefab",
+                    "position": {
+                        "x": -5.0,
+                        "y": 0.0,
+                        "z": -6.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 16,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "16 (7)",
+                    "path": "Assets/Resources/Monsters/16.prefab",
+                    "position": {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": 4.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 16,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "16 (8)",
+                    "path": "Assets/Resources/Monsters/16.prefab",
+                    "position": {
+                        "x": -5.0,
+                        "y": 0.0,
+                        "z": 5.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 16,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "16 (9)",
+                    "path": "Assets/Resources/Monsters/16.prefab",
+                    "position": {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": -5.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 16,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "43 (1)",
+                    "path": "Assets/Resources/Monsters/43.prefab",
+                    "position": {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.7000006437301636,
+                        "y": 1.7000000476837159,
+                        "z": 1.7000006437301636
+                    },
+                    "cfgId": 43,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                }
+            ],
+            "MiniBosses": [],
+            "Bosses": [],
+            "Props": []
+        },
+        {
+            "name": "3",
+            "Monsters": [
+                {
+                    "name": "14",
+                    "path": "Assets/Resources/Monsters/14.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2999999523162842,
+                        "y": 1.2999999523162842,
+                        "z": 1.2999999523162842
+                    },
+                    "cfgId": 14,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "14 (1)",
+                    "path": "Assets/Resources/Monsters/14.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2999999523162842,
+                        "y": 1.2999999523162842,
+                        "z": 1.2999999523162842
+                    },
+                    "cfgId": 14,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "8",
+                    "path": "Assets/Resources/Monsters/8.prefab",
+                    "position": {
+                        "x": -5.0,
+                        "y": 0.0,
+                        "z": 3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 8,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "8 (1)",
+                    "path": "Assets/Resources/Monsters/8.prefab",
+                    "position": {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": -3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 8,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "8 (2)",
+                    "path": "Assets/Resources/Monsters/8.prefab",
+                    "position": {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": 3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 8,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "8 (3)",
+                    "path": "Assets/Resources/Monsters/8.prefab",
+                    "position": {
+                        "x": -5.0,
+                        "y": 0.0,
+                        "z": -3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 8,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "14 (2)",
+                    "path": "Assets/Resources/Monsters/14.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2999999523162842,
+                        "y": 1.2999999523162842,
+                        "z": 1.2999999523162842
+                    },
+                    "cfgId": 14,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "14 (3)",
+                    "path": "Assets/Resources/Monsters/14.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2999999523162842,
+                        "y": 1.2999999523162842,
+                        "z": 1.2999999523162842
+                    },
+                    "cfgId": 14,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "14 (4)",
+                    "path": "Assets/Resources/Monsters/14.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2999999523162842,
+                        "y": 1.2999999523162842,
+                        "z": 1.2999999523162842
+                    },
+                    "cfgId": 14,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                }
+            ],
+            "MiniBosses": [],
+            "Bosses": [],
+            "Props": []
+        },
+        {
+            "name": "4",
+            "Monsters": [
+                {
+                    "name": "3",
+                    "path": "Assets/Resources/Monsters/3.prefab",
+                    "position": {
+                        "x": -5.0,
+                        "y": 0.0,
+                        "z": 3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 3,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "3 (1)",
+                    "path": "Assets/Resources/Monsters/3.prefab",
+                    "position": {
+                        "x": -5.0,
+                        "y": 0.0,
+                        "z": -3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 3,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "3 (2)",
+                    "path": "Assets/Resources/Monsters/3.prefab",
+                    "position": {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": 3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 3,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "3 (3)",
+                    "path": "Assets/Resources/Monsters/3.prefab",
+                    "position": {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": -3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 3,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "6",
+                    "path": "Assets/Resources/Monsters/6.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 6,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "6 (1)",
+                    "path": "Assets/Resources/Monsters/6.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 6,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "6 (2)",
+                    "path": "Assets/Resources/Monsters/6.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 6,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "6 (3)",
+                    "path": "Assets/Resources/Monsters/6.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 6,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "6 (4)",
+                    "path": "Assets/Resources/Monsters/6.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 6,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "6 (5)",
+                    "path": "Assets/Resources/Monsters/6.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 6,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                }
+            ],
+            "MiniBosses": [],
+            "Bosses": [],
+            "Props": []
+        },
+        {
+            "name": "5",
+            "Monsters": [
+                {
+                    "name": "20",
+                    "path": "Assets/Resources/Monsters/20.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": -7.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 20,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "20 (1)",
+                    "path": "Assets/Resources/Monsters/20.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": 6.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 20,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "20 (2)",
+                    "path": "Assets/Resources/Monsters/20.prefab",
+                    "position": {
+                        "x": 9.0,
+                        "y": 0.0,
+                        "z": -7.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 20,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "20 (3)",
+                    "path": "Assets/Resources/Monsters/20.prefab",
+                    "position": {
+                        "x": 9.0,
+                        "y": 0.0,
+                        "z": 6.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 20,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "20 (4)",
+                    "path": "Assets/Resources/Monsters/20.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -5.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 20,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "20 (5)",
+                    "path": "Assets/Resources/Monsters/20.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 5.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 20,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "20 (6)",
+                    "path": "Assets/Resources/Monsters/20.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 20,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "20 (7)",
+                    "path": "Assets/Resources/Monsters/20.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 20,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "20 (8)",
+                    "path": "Assets/Resources/Monsters/20.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 20,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                }
+            ],
+            "MiniBosses": [],
+            "Bosses": [],
+            "Props": [
+                {
+                    "path": "HP",
+                    "position": {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5,
+                        "y": 1.5,
+                        "z": 1.5
+                    }
+                }
+            ]
+        },
+        {
+            "name": "6",
+            "Monsters": [
+                {
+                    "name": "13",
+                    "path": "Assets/Resources/Monsters/13.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.000000238418579,
+                        "y": 1.0,
+                        "z": 1.000000238418579
+                    },
+                    "cfgId": 13,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "13 (1)",
+                    "path": "Assets/Resources/Monsters/13.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.000000238418579,
+                        "y": 1.0,
+                        "z": 1.000000238418579
+                    },
+                    "cfgId": 13,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "13 (2)",
+                    "path": "Assets/Resources/Monsters/13.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.000000238418579,
+                        "y": 1.0,
+                        "z": 1.000000238418579
+                    },
+                    "cfgId": 13,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "13 (3)",
+                    "path": "Assets/Resources/Monsters/13.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.000000238418579,
+                        "y": 1.0,
+                        "z": 1.000000238418579
+                    },
+                    "cfgId": 13,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "70",
+                    "path": "Assets/Resources/Monsters/70.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 6.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 70,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "70 (1)",
+                    "path": "Assets/Resources/Monsters/70.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -5.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 70,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "70 (2)",
+                    "path": "Assets/Resources/Monsters/70.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 70,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "70 (3)",
+                    "path": "Assets/Resources/Monsters/70.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 70,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                }
+            ],
+            "MiniBosses": [],
+            "Bosses": [],
+            "Props": []
+        },
+        {
+            "name": "7",
+            "Monsters": [
+                {
+                    "name": "9",
+                    "path": "Assets/Resources/Monsters/9.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5,
+                        "y": 1.5,
+                        "z": 1.5
+                    },
+                    "cfgId": 9,
+                    "patrolRadios": 6.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "9 (1)",
+                    "path": "Assets/Resources/Monsters/9.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5,
+                        "y": 1.5,
+                        "z": 1.5
+                    },
+                    "cfgId": 9,
+                    "patrolRadios": 6.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "6",
+                    "path": "Assets/Resources/Monsters/6.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 6,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "6 (1)",
+                    "path": "Assets/Resources/Monsters/6.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 6,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "9 (2)",
+                    "path": "Assets/Resources/Monsters/9.prefab",
+                    "position": {
+                        "x": -5.0,
+                        "y": 0.0,
+                        "z": -6.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5,
+                        "y": 1.5,
+                        "z": 1.5
+                    },
+                    "cfgId": 9,
+                    "patrolRadios": 6.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "9 (3)",
+                    "path": "Assets/Resources/Monsters/9.prefab",
+                    "position": {
+                        "x": -5.0,
+                        "y": 0.0,
+                        "z": 5.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5,
+                        "y": 1.5,
+                        "z": 1.5
+                    },
+                    "cfgId": 9,
+                    "patrolRadios": 6.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "9 (4)",
+                    "path": "Assets/Resources/Monsters/9.prefab",
+                    "position": {
+                        "x": 4.0,
+                        "y": 0.0,
+                        "z": -6.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5,
+                        "y": 1.5,
+                        "z": 1.5
+                    },
+                    "cfgId": 9,
+                    "patrolRadios": 6.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "9 (5)",
+                    "path": "Assets/Resources/Monsters/9.prefab",
+                    "position": {
+                        "x": 4.0,
+                        "y": 0.0,
+                        "z": 5.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5,
+                        "y": 1.5,
+                        "z": 1.5
+                    },
+                    "cfgId": 9,
+                    "patrolRadios": 6.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "6 (2)",
+                    "path": "Assets/Resources/Monsters/6.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 6,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "6 (3)",
+                    "path": "Assets/Resources/Monsters/6.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 6,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "6 (4)",
+                    "path": "Assets/Resources/Monsters/6.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 6,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "6 (5)",
+                    "path": "Assets/Resources/Monsters/6.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000005960464478,
+                        "y": 1.5,
+                        "z": 1.5000005960464478
+                    },
+                    "cfgId": 6,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                }
+            ],
+            "MiniBosses": [],
+            "Bosses": [],
+            "Props": []
+        },
+        {
+            "name": "8",
+            "Monsters": [
+                {
+                    "name": "7",
+                    "path": "Assets/Resources/Monsters/7.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 7,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "7 (1)",
+                    "path": "Assets/Resources/Monsters/7.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 7,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "16",
+                    "path": "Assets/Resources/Monsters/16.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 16,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "16 (1)",
+                    "path": "Assets/Resources/Monsters/16.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.5000004768371583,
+                        "y": 1.5,
+                        "z": 1.5000004768371583
+                    },
+                    "cfgId": 16,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "5",
+                    "path": "Assets/Resources/Monsters/5.prefab",
+                    "position": {
+                        "x": -10.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 3.0000009536743166,
+                        "y": 3.0,
+                        "z": 3.0000009536743166
+                    },
+                    "cfgId": 5,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "7 (2)",
+                    "path": "Assets/Resources/Monsters/7.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 7,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "5 (1)",
+                    "path": "Assets/Resources/Monsters/5.prefab",
+                    "position": {
+                        "x": 10.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 3.0000009536743166,
+                        "y": 3.0,
+                        "z": 3.0000009536743166
+                    },
+                    "cfgId": 5,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": true,
+                    "followPlayer": true,
+                    "beatBack": true
+                },
+                {
+                    "name": "7 (3)",
+                    "path": "Assets/Resources/Monsters/7.prefab",
+                    "position": {
+                        "x": 6.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 7,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "7 (4)",
+                    "path": "Assets/Resources/Monsters/7.prefab",
+                    "position": {
+                        "x": -5.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 7,
+                    "patrolRadios": 5.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                }
+            ],
+            "MiniBosses": [],
+            "Bosses": [],
+            "Props": []
+        },
+        {
+            "name": "9",
+            "Monsters": [
+                {
+                    "name": "66",
+                    "path": "Assets/Resources/Monsters/66.prefab",
+                    "position": {
+                        "x": -5.0,
+                        "y": 0.0,
+                        "z": 3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 66,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "66 (1)",
+                    "path": "Assets/Resources/Monsters/66.prefab",
+                    "position": {
+                        "x": -5.0,
+                        "y": 0.0,
+                        "z": -3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 66,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "66 (2)",
+                    "path": "Assets/Resources/Monsters/66.prefab",
+                    "position": {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": 3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 66,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "66 (3)",
+                    "path": "Assets/Resources/Monsters/66.prefab",
+                    "position": {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": -3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 66,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "66 (4)",
+                    "path": "Assets/Resources/Monsters/66.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 66,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                },
+                {
+                    "name": "66 (5)",
+                    "path": "Assets/Resources/Monsters/66.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.700000524520874,
+                        "y": 1.7000000476837159,
+                        "z": 1.700000524520874
+                    },
+                    "cfgId": 66,
+                    "patrolRadios": 0.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": false
+                }
+            ],
+            "MiniBosses": [],
+            "Bosses": [],
+            "Props": []
+        },
+        {
+            "name": "10",
+            "Monsters": [
+                {
+                    "name": "11",
+                    "path": "Assets/Resources/Monsters/11.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2000000476837159,
+                        "y": 1.2000000476837159,
+                        "z": 1.2000000476837159
+                    },
+                    "cfgId": 11,
+                    "patrolRadios": 4.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "11 (1)",
+                    "path": "Assets/Resources/Monsters/11.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -3.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2000000476837159,
+                        "y": 1.2000000476837159,
+                        "z": 1.2000000476837159
+                    },
+                    "cfgId": 11,
+                    "patrolRadios": 4.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "11 (2)",
+                    "path": "Assets/Resources/Monsters/11.prefab",
+                    "position": {
+                        "x": -8.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2000000476837159,
+                        "y": 1.2000000476837159,
+                        "z": 1.2000000476837159
+                    },
+                    "cfgId": 11,
+                    "patrolRadios": 4.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "11 (3)",
+                    "path": "Assets/Resources/Monsters/11.prefab",
+                    "position": {
+                        "x": 8.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2000000476837159,
+                        "y": 1.2000000476837159,
+                        "z": 1.2000000476837159
+                    },
+                    "cfgId": 11,
+                    "patrolRadios": 4.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "11 (4)",
+                    "path": "Assets/Resources/Monsters/11.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2000000476837159,
+                        "y": 1.2000000476837159,
+                        "z": 1.2000000476837159
+                    },
+                    "cfgId": 11,
+                    "patrolRadios": 4.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "11 (5)",
+                    "path": "Assets/Resources/Monsters/11.prefab",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 10.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2000000476837159,
+                        "y": 1.2000000476837159,
+                        "z": 1.2000000476837159
+                    },
+                    "cfgId": 11,
+                    "patrolRadios": 4.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "11 (6)",
+                    "path": "Assets/Resources/Monsters/11.prefab",
+                    "position": {
+                        "x": 6.0,
+                        "y": 0.0,
+                        "z": 5.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2000000476837159,
+                        "y": 1.2000000476837159,
+                        "z": 1.2000000476837159
+                    },
+                    "cfgId": 11,
+                    "patrolRadios": 4.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": true
+                },
+                {
+                    "name": "11 (7)",
+                    "path": "Assets/Resources/Monsters/11.prefab",
+                    "position": {
+                        "x": -5.0,
+                        "y": 0.0,
+                        "z": -6.0
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "scale": {
+                        "x": 1.2000000476837159,
+                        "y": 1.2000000476837159,
+                        "z": 1.2000000476837159
+                    },
+                    "cfgId": 11,
+                    "patrolRadios": 4.0,
+                    "trackPlayer": false,
+                    "followPlayer": false,
+                    "beatBack": true
+                }
+            ],
+            "MiniBosses": [],
+            "Bosses": [],
+            "Props": []
+        }
+    ],
+    "MonsterPoints": [],
+    "MonsterPrefabInfos": []
+}
