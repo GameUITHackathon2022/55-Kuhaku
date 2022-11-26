@@ -27,9 +27,9 @@ public class MeleeEnemy : EnemyBase
         base.DestroyThisEnemy();
     }
 
-    protected override void Update()
+    protected override void FixedUpdate()
     {
-        base.Update();
+        base.FixedUpdate();
     }
     #endregion
 

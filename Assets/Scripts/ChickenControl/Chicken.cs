@@ -45,7 +45,8 @@ public class Chicken : MonoBehaviour
                 chipElement.SetSpeedAnim(0);
                 continue;
             }
-            else if(Vector3.Distance(point, chipElement.transform.position) < 0.1f)
+            
+            if(Vector3.Distance(point, chipElement.transform.position) < 0.1f)
                 continue;
             // Move body towards the point along the snakes path
             Vector3 moveDirection = point - chipElement.transform.position;
