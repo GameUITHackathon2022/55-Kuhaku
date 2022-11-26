@@ -16,12 +16,17 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] Transform dirLooking;
     [SerializeField] protected Rigidbody thisRG;
 
-    protected bool InDistance => Vector3.Distance(player.position, transform.position) <= enemyStatus.rangeAttack * 0.95f;
-    protected bool CanAttack => InDistance && timeCd <= 0;
+    protected bool InDistance()
+    {
+        var dis = Vector3.Distance(player.position, transform.position);
+     
+        return dis <= enemyStatus.rangeAttack;
+    }
+    protected bool CanAttack => InDistance() && timeCd <= 0;
 
     protected virtual void OnChasePlayer()
     {
-        if(!InDistance)
+        if(!InDistance())
         {
             Vector3 dir = (player.position - transform.position).normalized * enemyStatus.enemySpeed;
             Vector3 directionHeading = new Vector3(dir.x, 0, dir.z);
