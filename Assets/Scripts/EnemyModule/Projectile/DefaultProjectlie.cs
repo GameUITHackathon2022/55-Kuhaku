@@ -27,7 +27,13 @@ public class DefaultProjectlie : ActiveWeapon
         Debug.Log(collider.gameObject.name);
         if(collider.gameObject.CompareTag("Player"))
         {
-            PlayerManager.Instance.UserData.SetDmg(GetDmg());
+            //PlayerManager.Instance.UserData.SetDmg(GetDmg());
+            var baseDefend = collider.gameObject.GetComponent<DefendBase>();
+            if(baseDefend != null)
+            {
+                baseDefend.TakeDamage(1);
+            }
+
             Destroy(this.gameObject);
         }
         //Destroy(this.gameObject);

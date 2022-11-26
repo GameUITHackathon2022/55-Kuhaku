@@ -26,8 +26,12 @@ public class BoomerangProjectile : DefaultProjectlie
         //base.OnTriggerEnter(collision);
         if (collider.gameObject.CompareTag(EnemyDefine.playerTag))
         {
-            PlayerManager.Instance.UserData.SetDmg(GetDmg());
             
+            var baseDefend = collider.gameObject.GetComponent<DefendBase>();
+            if (baseDefend != null)
+            {
+                baseDefend.TakeDamage(1);
+            }
         }
 
         if(collider.gameObject.GetInstanceID() == this.GetInstanceID())
@@ -51,17 +55,17 @@ public class BoomerangProjectile : DefaultProjectlie
     private bool isForward;
     public override void SetStat(float rangeMulti)
     {
-        Vector3 target = enemyBase.transform.forward;
+        Vector3 target = enemyBase.transform.forward * rangeMulti + enemyBase.transform.position;
         isForward = true;
         //SetDirection(Vector3.zero);
         Debug.Log($"Do {target}");
-        tweener = transform.DOMove(target * rangeMulti, 1.2f)
+        tweener = transform.DOMove(target, 1.4f)
             .OnComplete(() =>
             {
                 isForward = false;
             
             }
-            );
+        );
     }
 
     protected override void Update()
