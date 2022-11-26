@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 2318602167312657836}
   - component: {fileID: 5192760338328637386}
   - component: {fileID: 6072413163510671710}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Range_Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f06a56f621cb147a176ef947867b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeToStop: 5
+  rangeToStop: 16.84
   defaultTarget: {fileID: 0}
   _player: {fileID: 0}
   _crrTarget: {fileID: 0}
@@ -268,10 +268,10 @@ MonoBehaviour:
   thisRG: {fileID: 6475782366953853554}
   headLook: {fileID: 3462338044551665057}
   enemyStatus:
-    enemyHp: 43
+    enemyHp: 200
     enemySpeed: 12
-    cdEnemey: 8.37
-    rangeAttack: 9
+    cdEnemey: 1.2
+    rangeAttack: 14
   weaponBase: {fileID: 8752480303155145072}
   animator: {fileID: 6072413163510671710}
 --- !u!114 &6072413163510671710
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponBase:
     dmg: 5
-    rangeDmg: 1.94
+    rangeDmg: 1.14
   enemyBase: {fileID: 5192760338328637386}
   placeToShoot: {fileID: 8136109658265161170}
   activeWeaponPrefab: {fileID: 6293802111283785596, guid: 20289227d79946b41840e0b736d0b704,

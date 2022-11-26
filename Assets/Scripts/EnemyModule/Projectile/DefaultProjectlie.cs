@@ -32,10 +32,9 @@ public class DefaultProjectlie : ActiveWeapon
             if(baseDefend != null)
             {
                 baseDefend.TakeDamage(weaponBase.dmg);
-
+                Destroy(this.gameObject);
             }
             //Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
     }
 }
