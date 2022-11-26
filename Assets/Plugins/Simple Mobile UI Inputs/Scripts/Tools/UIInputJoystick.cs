@@ -17,6 +17,8 @@ namespace UI_Inputs
 
         private Joystick joystick;
 
+        public GameObject joystickTut;
+
         private void Awake()
         {
             GetJoystick();
@@ -33,6 +35,14 @@ namespace UI_Inputs
         private Vector2 JoystickDirection()
         {
             return joystick == null ? Vector2.zero : joystick.Direction;
+        }
+
+        private void Update()
+        {
+            if (this.JoystickDirection() != Vector2.zero)
+            {
+                joystickTut.SetActive(false);
+            }
         }
 
         private void OnDisable()
