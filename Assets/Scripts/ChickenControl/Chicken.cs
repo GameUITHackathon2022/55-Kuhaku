@@ -33,7 +33,7 @@ public class Chicken : MonoBehaviour
     {
         currentHealth = chickenHealth;
     }
-
+    
     // Start is called before the first frame update
 
     // Update is called once per frame
