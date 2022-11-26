@@ -6,7 +6,7 @@ public class DefendBase : ObjectBase
 {
     public override ObjectTypeID ObjectTypeID => ObjectTypeID.DEFEND;
 
-    public virtual void TakeDamage(float damage)
+    public virtual void TakeDamage(int damage)
     {
 
     }

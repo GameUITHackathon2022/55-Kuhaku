@@ -26,9 +26,9 @@ public class ObjectBase : MonoBehaviour
     /// </summary>
     public int level;
 
-    public float currentHp;
+    public int currentHp;
 
-    public float maxHp;
+    public int maxHp;
 
     public virtual ObjectTypeID ObjectTypeID => ObjectTypeID.NONE;
 

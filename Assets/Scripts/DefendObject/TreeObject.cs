@@ -50,7 +50,7 @@ public class TreeObject : DefendBase
 
     }
 
-    public override void TakeDamage(float damage)
+    public override void TakeDamage(int damage)
     {
         if (!seen)
         {
