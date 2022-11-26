@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class Chicken : MonoBehaviour
+public class Chicken : MonoSingleton<Chicken>
 {
     // Settings
     public float MoveSpeed = 5;
