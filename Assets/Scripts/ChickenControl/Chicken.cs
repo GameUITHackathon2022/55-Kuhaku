@@ -26,11 +26,15 @@ public class Chicken : MonoSingleton<Chicken>
     [SerializeField] private List<Vector3> PositionsHistory = new List<Vector3>();
     private bool isMove = false;
 
+    
     // Start is called before the first frame update
 
     // Update is called once per frame
     void Update()
     {
+        if(isMove)
+            PositionsHistory.Insert(0, chickenTail.position);
+
         if (BodyParts.Count <= 0 || PositionsHistory.Count <= 0)
             return;
 
@@ -56,11 +60,10 @@ public class Chicken : MonoSingleton<Chicken>
             // Move body towards the point along the snakes path
 
             Vector3 moveDirection = point - chipElement.transform.position;
-            moveDirection.y = 0;
             chipElement.transform.position += moveDirection.normalized * BodySpeed * Time.deltaTime;
             // Rotate body towards the point along the snakes path
-            if (moveDirection.magnitude >= 0.1f)
-                chipElement.transform.rotation = Quaternion.LookRotation(moveDirection);
+            // if(Vector3.Dot(moveDirection,chipElement.transform.forward) > 0)
+                chipElement.transform.rotation = Quaternion.Slerp(chipElement.transform.rotation,Quaternion.LookRotation(moveDirection.normalized * BodySpeed),0.1f);
             chipElement.SetSpeedAnim(1);
         }
 
@@ -78,7 +81,6 @@ public class Chicken : MonoSingleton<Chicken>
             Vector3 nextPos = transform.position +
                               PlayerMovementDirection().normalized * MoveSpeed * Time.fixedDeltaTime;
             rb.MovePosition(nextPos);
-            PositionsHistory.Insert(0, chickenTail.position);
             isMove = true;
             // transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(PlayerMovementDirection().normalized),0.1f);
             chickenVisual.rotation = Quaternion.Slerp(chickenVisual.rotation,
